@@ -1,11 +1,12 @@
 ---
-type: legal-atom
+type: legal-node
+node_kind: definition
 title: "家庭暴力定义"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第五条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第三十七条"
-updated: 2026-06-06
+updated: 2026-06-07
 status: draft
 ---
 
@@ -28,6 +29,13 @@ status: draft
 - “这算家暴吗？”
 - “他只是骂我/恐吓我，也算吗？”
 - “我们不是结婚关系，只是一起生活，能不能适用反家暴法？”
+
+## 机制关系
+
+详见 [[edges]]：
+
+- `defines_scope_for` → [[public-security-response-duty]]
+- `defines_scope_for` → [[personal-safety-protection-order]]
 
 ## 来源依据
 

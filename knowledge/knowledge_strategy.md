@@ -92,12 +92,11 @@ knowledge/source/
 原始法律 / 地方法规 / 司法解释 / 指南 / 案例 / 社工经验
         |
         v
-knowledge/wiki/legal-atoms/
-从原始资料抽取可引用、可审计的法律原子单元
-        |
-        v
-knowledge/wiki/legal-mechanisms/
-把法律原子组织成“公安响应、证据、保护令”等机制
+knowledge/wiki/
+法律机制树：legal atoms 是节点，legal mechanisms 是边
+        |-- nodes/: 法律原子节点
+        |-- edges.md: 机制关系 / 边
+        |-- legal-mechanism-tree.md: 图谱入口
         |
         v
 Scenario Capsules（后续 product layer）
@@ -117,5 +116,5 @@ Scenario Capsules（后续 product layer）
 当前维护边界：
 
 - `knowledge/source/` 原始法条永远只读，由用户添加和维护。
-- LLM 只维护 `knowledge/wiki/legal-atoms/` 与 `knowledge/wiki/legal-mechanisms/`。
+- LLM 只维护 `knowledge/wiki/` 中的法律机制树：节点、边、索引和日志。
 - 场景胶囊之后由用户和 LLM 一起更新，当前阶段不创建。

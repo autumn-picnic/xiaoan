@@ -1,5 +1,6 @@
 ---
-type: legal-atom
+type: legal-node
+node_kind: remedy
 title: "人身安全保护令"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二十三条"
@@ -13,7 +14,7 @@ source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第三十一条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第三十二条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第三十四条"
-updated: 2026-06-06
+updated: 2026-06-07
 status: draft
 ---
 
@@ -69,6 +70,15 @@ status: draft
 - 保护令不等于立即解决所有安全风险；高危情况下仍应优先考虑即时安全。
 - 小安可以解释申请条件和流程，但不能替用户判断法院一定会批准。
 - 申请材料、证据组织和具体策略需要结合法律援助或专业人士意见。
+
+## 机制关系
+
+详见 [[edges]]：
+
+- [[domestic-violence-definition]] `defines_scope_for` 本节点。
+- [[public-security-response-duty]] `provides_evidence_for` → 本节点。
+- [[public-security-response-duty]] `assists_execution_of` → 本节点。
+- [[support-and-legal-aid]] `parallel_support_channel_for` → 本节点。
 
 ## 来源依据
 

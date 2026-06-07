@@ -1,5 +1,6 @@
 ---
-type: legal-atom
+type: legal-node
+node_kind: support
 title: "求助、庇护、法律援助与组织支持"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第十三条"
@@ -8,7 +9,7 @@ source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二十条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二十一条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二十二条"
-updated: 2026-06-06
+updated: 2026-06-07
 status: draft
 ---
 
@@ -45,6 +46,13 @@ status: draft
 - 本法没有提供具体机构名称、联系方式、庇护所地址或地方可用性。
 - 不应编造本地资源；涉及具体地点时，应提示需要通过当地可靠渠道核实。
 - 这些渠道可以作为支持选项，但不能替代即时危险时的安全处理。
+
+## 机制关系
+
+详见 [[edges]]：
+
+- 本节点 `parallel_support_channel_for` → [[public-security-response-duty]]
+- 本节点 `parallel_support_channel_for` → [[personal-safety-protection-order]]
 
 ## 来源依据
 

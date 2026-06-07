@@ -1,5 +1,6 @@
 ---
-type: legal-atom
+type: legal-node
+node_kind: duty
 title: "公安机关家暴处置职责"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第十三条"
@@ -8,7 +9,7 @@ source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第十六条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第十七条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二十条"
-updated: 2026-06-06
+updated: 2026-06-07
 status: draft
 ---
 
@@ -48,6 +49,15 @@ status: draft
 - 本法确认公安机关职责，但没有细化每个地方派出所的具体办理流程。
 - 不应承诺“报警一定会解决”。更稳妥的表达是：法律上公安机关有处置职责，相关记录也可能对后续认定家暴事实有帮助。
 - 如果用户正在遭受暴力、加害人在附近、被限制离开或有严重伤害风险，应先进入安全优先处理，而不是展开法条。
+
+## 机制关系
+
+详见 [[edges]]：
+
+- [[domestic-violence-definition]] `defines_scope_for` 本节点。
+- 本节点 `provides_evidence_for` → [[personal-safety-protection-order]]
+- 本节点 `assists_execution_of` → [[personal-safety-protection-order]]
+- [[support-and-legal-aid]] `parallel_support_channel_for` → 本节点
 
 ## 来源依据
 
