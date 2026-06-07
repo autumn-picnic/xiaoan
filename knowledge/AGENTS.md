@@ -66,7 +66,7 @@ node_kind: definition | actor | right | duty | remedy | procedure | condition | 
 
 ## Schema v0.1
 
-This is the frozen-enough working schema for the current phase. Treat it as a draft that may be refined with a legal reviewer, but use it consistently when ingesting.
+This is the frozen working schema for the current phase (frozen 2026-06-07). Refine only with explicit user sign-off or legal-reviewer feedback; use it consistently when ingesting.
 
 ### Node kinds
 

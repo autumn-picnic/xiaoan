@@ -15,11 +15,11 @@ status: draft
 | --- | --- | --- | --- |
 | [[中华人民共和国反家庭暴力法]] | national_law | 1 | done |
 | [[涉及家庭暴力婚姻案件审理指南]] | judicial_interpretation | 1 | pending |
-| [[人身安全保护令实务]] | practice_guide | 3 | pilot |
+| [[人身安全保护令实务]] | practice_guide | 3 | done |
 | [[中国反家庭暴力法律法规与实务指南]] | practice_guide | 3 | pending |
-| [[公安机关办理伤害案件规定]] | agency_rule | 2 | pilot |
+| [[公安机关办理伤害案件规定]] | agency_rule | 2 | done |
 | [[妇联组织受理家庭暴力投诉工作规程]] | agency_rule | 2 | pending |
-| [[预防和制止家庭暴力警察工作手册]] | official_manual | 3 | pilot |
+| [[预防和制止家庭暴力警察工作手册]] | official_manual | 3 | done |
 | [[预防和制止家庭暴力多部门合作工作手册]] | official_manual | 3 | pending |
 | [[如何寻求医院及法医鉴定的帮助]] | practice_guide | 3 | pending |
 | [[全国投诉渠道]] | channel_directory | 4 | pending |
@@ -39,7 +39,7 @@ status: draft
 | [[青海省反家庭暴力条例]] | local_regulation | 2 | pending |
 | [[黑龙江省反家庭暴力条例]] | local_regulation | 2 | pending |
 | [[安徽省实施《中华人民共和国反家庭暴力法》办法]] | local_regulation | 2 | pending |
-| [[广东省实施《中华人民共和国反家庭暴力法》办法]] | local_regulation | 2 | pending |
+| [[广东省实施《中华人民共和国反家庭暴力法》办法]] | local_regulation | 2 | done |
 | [[海南省实施《中华人民共和国反家庭暴力法》办法]] | local_regulation | 2 | pending |
 | [[湖南省实施《中华人民共和国反家庭暴力法》办法]] | local_regulation | 2 | pending |
 | [[重庆市实施《中华人民共和国反家庭暴力法》办法]] | local_regulation | 2 | pending |

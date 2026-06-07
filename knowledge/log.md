@@ -31,3 +31,13 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Aligned `knowledge/wiki/edges.md` edge vocabulary with the schema.
 - Added [[source-registry]] cataloging all `knowledge/source/` files with `source_type`, tier, and ingest status, plus a pilot ingest batch.
 - Status conventions: new legal claims default to `draft`; cross-source/interpretive claims default to `needs-review`; legal-reviewer-confirmed claims become `reviewed`.
+
+## [2026-06-07] pilot-ingest | 4 sources, schema v0.1 frozen
+
+- Froze schema v0.1 and ran pilot ingest on 4 sources.
+- ingest | 人身安全保护令实务 (practice_guide): added [[protection-order-evidence]] node; enriched [[personal-safety-protection-order]] with judicial-interpretation refinements (needs-review); enriched [[support-and-legal-aid]] (legal aid not limited by hardship, needs-review).
+- ingest | 公安机关办理伤害案件规定 (agency_rule): added [[injury-appraisal-procedure]] node (appraisal commission/timelines, mediation limits).
+- ingest | 预防和制止家庭暴力警察工作手册 (official_manual): added [[police-dv-handling-workflow]] node (5-stage workflow, risk assessment); flagged conflicts_with current law (predates 2016, no 告诫书) -> needs-review.
+- ingest | 广东省实施反家暴法办法 (local_regulation): added [[guangdong-implementation]] local-rule node with 3 `localizes` edges.
+- Schema gaps found: (1) no relation for judicial-interpretation refining national law (used provides_evidence_for + needs-review; consider adding `interprets`/`refines`); (2) existing protection-order node bundles remedy+procedure+condition+consequence, may need splitting; (3) secondary sources citing primary judicial interpretations should consistently be needs-review with "原文待补".
+- Next: legal reviewer to check needs-review nodes/edges; then ingest remaining sources per [[source-registry]].

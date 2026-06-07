@@ -71,14 +71,25 @@ status: draft
 - 小安可以解释申请条件和流程，但不能替用户判断法院一定会批准。
 - 申请材料、证据组织和具体策略需要结合法律援助或专业人士意见。
 
+## 司法解释细化（needs-review）
+
+以下要点来自二手实务来源 `knowledge/source/人身安全保护令实务.md`，转述自法释〔2022〕17号等文件，原文不在 `knowledge/source/` 中，需法律专业人士核对：
+
+- 证明标准为“较大可能性”，并非刑事证明标准；详见 [[protection-order-evidence]]。
+- 申请保护令不以提起离婚等民事诉讼为前提。
+- 适用范围参照扩展到共同生活的人及同居关系；暴力类型包括冻饿、经常性侮辱/诽谤/威胁/跟踪/骚扰、经济控制等。
+- 可申请的措施还包括禁止以电话、短信、即时通讯、电子邮件等方式骚扰，以及禁止在住所/学校/单位等一定范围内活动。
+- 书面申请确有困难可口头申请并记入笔录；应有受理“绿色通道”。
+
 ## 机制关系
 
 详见 [[edges]]：
 
 - [[domestic-violence-definition]] `defines_scope_for` 本节点。
-- [[public-security-response-duty]] `provides_evidence_for` → 本节点。
-- [[public-security-response-duty]] `assists_execution_of` → 本节点。
-- [[support-and-legal-aid]] `parallel_support_channel_for` → 本节点。
+- [[public-security-response-duty]] `provides_evidence_for` -> 本节点。
+- [[public-security-response-duty]] `assists_execution_of` -> 本节点。
+- [[protection-order-evidence]] `provides_evidence_for` -> 本节点。
+- [[support-and-legal-aid]] `parallel_support_channel_for` -> 本节点。
 
 ## 来源依据
 
