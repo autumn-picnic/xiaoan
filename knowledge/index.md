@@ -1,12 +1,18 @@
 # Knowledge Index
 
-This is the content-oriented catalog for XiaoAn's LLM-maintained wiki. Read this first when searching the wiki, then open the most relevant pages.
+This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism tree. Read this first when searching the legal middle layer, then open the most relevant pages.
 
-## Sources
+## Tree Root
 
-| Page | Summary | Raw source |
+| Page | Summary |
+| --- | --- |
+| [[legal-mechanism-tree]] | Root node for the legal middle layer: raw legal sources → legal atoms → legal mechanisms. |
+
+## Read-only Raw Legal Sources
+
+| Source | Notes |
 | --- | --- | --- |
-| [[anti-domestic-violence-law]] | 《中华人民共和国反家庭暴力法》source summary: definition, response duties, protection orders, support resources, legal responsibility. | `knowledge/source/中华人民共和国反家庭暴力法.md` |
+| [[中华人民共和国反家庭暴力法]] | User-maintained raw legal source. Do not edit. |
 
 ## Legal Atoms
 
@@ -25,14 +31,8 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained wiki. Read this
 | [[public-security-domestic-violence-response]] | Mechanism for police response, warning letters, records, follow-up, and evidentiary value. | [[public-security-response-atom]] |
 | [[personal-safety-protection-order]] | Mechanism for protection orders as a civil safety remedy. | [[personal-safety-protection-order-atom]] |
 
-## Scenario Capsules
-
-| Page | Trigger | Summary | Status |
-| --- | --- | --- | --- |
-| [[police-say-family-matter]] | "警察说这是家务事/不处理怎么办" | User-facing R-A-G capsule that reframes police pushback, suggests low-burden next steps, and grounds them in public security duties. | draft |
-
 ## Open Gaps
 
 - Need sources for detailed police procedures beyond the Anti-Domestic-Violence Law, such as public security implementation rules.
-- Need local implementation rules and front-line social work experience before creating region-specific or practice-heavy capsules.
-- Need expert review before using draft scenario capsules in production responses.
+- Need local implementation rules to expand the legal mechanism tree beyond national law.
+- Scenario capsules are intentionally out of scope for the current phase.

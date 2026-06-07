@@ -49,11 +49,6 @@ status: draft
 
 - [[personal-safety-protection-order-atom]]
 
-## 适合连接的场景胶囊
-
-- 后续可创建：`can-i-apply-protection-order`
-- 后续可创建：`can-the-court-make-him-move-out`
-
 ## 来源依据
 
 - 第23-34条：人身安全保护令申请、条件、措施、执行、违反后果。

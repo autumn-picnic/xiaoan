@@ -175,6 +175,6 @@ related_topics:
 
 ### 知识库
 - 保留 `knowledge/source/` 原始文档作为 source of truth；
-- 按 `AGENTS.md` 的 llm-wiki 规则维护 `knowledge/wiki/`，从核心材料中抽取法律原子单元，构建反家暴相关的 legal mechanism layer；
+- 按 `AGENTS.md` 的 llm-wiki 规则只维护法律中间层：从核心材料中抽取法律原子单元，构建 `knowledge/wiki/legal-mechanisms/` 里的 legal mechanism tree；
 - 用 `knowledge/index.md` 做内容目录，用 `knowledge/log.md` 记录 ingest / query / lint 历史；
-- 同时建立 `knowledge/wiki/scenario-capsules/` 作为 product layer，并在进入生产前进行专家审核。
+- 场景胶囊作为后续 product layer，当前不由 LLM 单独创建或维护。

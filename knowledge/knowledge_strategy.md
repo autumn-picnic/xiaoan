@@ -100,8 +100,8 @@ knowledge/wiki/legal-mechanisms/
 把法律原子组织成“公安响应、证据、保护令”等机制
         |
         v
-knowledge/wiki/scenario-capsules/
-围绕具体用户痛点重组知识
+Scenario Capsules（后续 product layer）
+围绕具体用户痛点重组知识，当前阶段暂不创建
         |
         |-- Recognize: 用户如何理解处境
         |-- Act: 用户下一步怎么做
@@ -113,3 +113,9 @@ knowledge/wiki/scenario-capsules/
 - `AGENTS.md`：LLM 维护 wiki 的 schema 和操作规则。
 - `knowledge/index.md`：内容目录，回答和检索前优先阅读。
 - `knowledge/log.md`：按时间追加记录 ingest、query、lint 和重大维护。
+
+当前维护边界：
+
+- `knowledge/source/` 原始法条永远只读，由用户添加和维护。
+- LLM 只维护 `knowledge/wiki/legal-atoms/` 与 `knowledge/wiki/legal-mechanisms/`。
+- 场景胶囊之后由用户和 LLM 一起更新，当前阶段不创建。

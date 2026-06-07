@@ -2,15 +2,21 @@
 
 ## Purpose
 
-This repository is an LLM-maintained knowledge wiki for XiaoAn, a domestic-violence first-response assistant. The goal is not generic RAG; it is a persistent, source-grounded wiki that turns raw legal and practice materials into safer, lower-burden support knowledge.
+This repository is an LLM-maintained legal mechanism wiki for XiaoAn, a domestic-violence first-response assistant. The current scope is the middle layer only: read immutable legal sources and maintain a source-grounded legal mechanism tree.
 
 ## Layers
 
-- `knowledge/source/`: immutable raw sources. Treat these as the source of truth. Do not rewrite source content except to fix source metadata or obvious transcription errors.
-- `knowledge/wiki/`: LLM-owned synthesized wiki pages. Create and update these pages when ingesting sources or answering durable knowledge questions.
-- `knowledge/index.md`: content catalog. Update whenever a wiki page is created, renamed, or materially changed.
-- `knowledge/log.md`: chronological append-only activity log. Add an entry for every ingest, durable query page, or lint pass.
+- `knowledge/source/`: immutable raw legal sources. The user owns this layer. Never edit, rewrite, rename, summarize in place, or normalize source files unless the user explicitly asks.
+- `knowledge/wiki/legal-atoms/`: LLM-owned atomic legal units extracted from sources.
+- `knowledge/wiki/legal-mechanisms/`: LLM-owned legal mechanism tree. This is the primary maintained layer.
+- `knowledge/index.md`: content catalog for the legal mechanism tree. Update whenever a legal atom or mechanism page is created, renamed, or materially changed.
+- `knowledge/log.md`: chronological append-only activity log. Add an entry for every legal-source ingest, durable legal synthesis, or lint pass.
 - `README.md`, `knowledge/knowledge_strategy.md`, and `tech/code/architecture.md`: product and architecture context. Keep wiki changes aligned with these docs.
+
+Out of current scope:
+
+- Do not create or edit `knowledge/wiki/sources/` source-summary pages.
+- Do not create or edit `knowledge/wiki/scenario-capsules/` unless the user explicitly starts scenario-capsule work.
 
 ## Wiki Page Conventions
 
@@ -26,7 +32,7 @@ Recommended frontmatter:
 
 ```yaml
 ---
-type: source-summary | legal-atom | legal-mechanism | scenario-capsule | synthesis
+    type: legal-mechanism-tree | legal-atom | legal-mechanism | legal-synthesis
 title: ""
 source_refs:
   - "knowledge/source/example.md#第十五条"
@@ -37,30 +43,28 @@ status: draft | reviewed | needs-review
 
 ## Ingest Workflow
 
-1. Read the new raw source in `knowledge/source/`.
-2. Create or update a source summary page under `knowledge/wiki/sources/`.
-3. Extract legal atoms under `knowledge/wiki/legal-atoms/` when the source contains actionable legal units.
-4. Update mechanism pages under `knowledge/wiki/legal-mechanisms/` for cross-source synthesis.
-5. Update or create scenario capsules under `knowledge/wiki/scenario-capsules/` only when the source supports a concrete user pain point.
-6. Update `knowledge/index.md`.
-7. Append one entry to `knowledge/log.md`.
+1. Read new raw legal sources in `knowledge/source/` without modifying them.
+2. Extract or update legal atoms under `knowledge/wiki/legal-atoms/`.
+3. Update the legal mechanism tree under `knowledge/wiki/legal-mechanisms/`.
+4. Keep `knowledge/wiki/legal-mechanisms/legal-mechanism-tree.md` as the tree root.
+5. Update `knowledge/index.md`.
+6. Append one entry to `knowledge/log.md`.
 
-## Scenario Capsule Rules
+## Legal Mechanism Tree Rules
 
-Scenario capsules are the product-facing layer. Each capsule should include:
+Legal mechanism pages are not user scripts. They should explain how legal concepts, duties, remedies, procedures, evidence, and institutional responsibilities connect.
 
-- `Trigger`: concrete user phrasing or situation.
-- `Recognize`: a short, non-judgmental reframe that reduces self-blame or confusion.
-- `Act`: 1-3 low-burden next steps, with safety caveats.
-- `Ground`: source-grounded legal or practical basis and its limits.
-- `Related topics`: links to adjacent capsules or legal mechanisms.
-- `Safety override`: red flags that should bypass the capsule and route to crisis handling.
+- Use source-backed nodes, not free-form advice.
+- Keep atomic legal claims in `legal-atoms/`.
+- Keep cross-source synthesis and mechanism explanations in `legal-mechanisms/`.
+- Link mechanisms to their supporting atoms using Obsidian links.
+- Link the tree root to raw source filenames so Obsidian can visualize source-to-mechanism coverage without editing raw sources.
 
-Do not make a capsule sound like guaranteed legal advice. Use it to support the main agent's response, not to force a rigid script.
+Scenario capsules are a later product layer and should remain untouched unless the user explicitly asks to work on them.
 
 ## Safety and Legal Boundaries
 
-- High-risk signals override knowledge retrieval. If the user is in immediate danger, prioritize crisis SOP behavior over legal completeness.
+- High-risk signals override knowledge retrieval in product use. If the user is in immediate danger, prioritize crisis SOP behavior over legal completeness.
 - Never invent institutions, hotline numbers, shelter addresses, case law, or local procedures.
 - Do not promise outcomes such as "police will definitely handle it" or "the court will approve it."
 - For individual legal strategy, frame content as rights education and suggest professional legal aid when needed.
@@ -68,6 +72,6 @@ Do not make a capsule sound like guaranteed legal advice. Use it to support the 
 
 ## Maintenance
 
-- When answering a question produces durable synthesis, file it back into `knowledge/wiki/` and index it.
-- Periodically lint the wiki for orphan pages, stale claims, missing citations, duplicate concepts, and outdated scenario capsules.
+- When answering a legal question produces durable synthesis, file it back into the legal mechanism tree and index it.
+- Periodically lint the legal mechanism tree for orphan pages, stale claims, missing citations, duplicate concepts, and source coverage gaps.
 - Prefer small, well-cited pages over long uncited essays.

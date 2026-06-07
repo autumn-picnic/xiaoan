@@ -32,11 +32,6 @@ status: draft
 
 - [[domestic-violence-definition-atom]]
 
-## 适合连接的场景胶囊
-
-- 后续可创建：`is-this-domestic-violence`
-- 后续可创建：`frequent-verbal-abuse-and-threats`
-
 ## 来源依据
 
 - 第2条：家庭暴力定义。

@@ -44,12 +44,6 @@ status: draft
 
 - [[public-security-response-atom]]
 
-## 适合连接的场景胶囊
-
-- [[police-say-family-matter]]
-- 后续可创建：`after-report-how-to-follow-up`
-- 后续可创建：`how-to-request-warning-letter`
-
 ## 来源依据
 
 - 第13条：受害人可向公安机关报案。
