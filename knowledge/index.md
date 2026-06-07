@@ -8,6 +8,7 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | --- | --- |
 | [[legal-mechanism-tree]] | Root page for the legal middle layer: raw legal sources -> legal atom nodes + legal mechanism edges. |
 | [[edges]] | Edge catalog where legal mechanisms are represented as sourced relationships between nodes. |
+| [[source-registry]] | Registry of raw sources with `source_type`, trust tier, and ingest status. |
 
 ## Read-only Raw Legal Sources
 

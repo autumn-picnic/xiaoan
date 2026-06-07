@@ -17,10 +17,16 @@ status: draft
 | --- | --- |
 | `defines_scope_for` | 一个定义节点限定另一个制度/义务/救济节点的适用范围 |
 | `triggers` | 一个事实或条件触发某项义务、程序或救济 |
+| `requires` | 一个救济/程序需要某个条件或前置输入 |
+| `enables` | 一个节点使另一个节点在实践中可用 |
 | `provides_evidence_for` | 一个记录、材料或程序结果可支持后续事实认定 |
 | `assists_execution_of` | 一个机构或程序协助另一个救济/裁定执行 |
 | `parallel_support_channel_for` | 一个支持渠道与另一路径并行存在，可作为补充 |
 | `creates_consequence_for` | 一个行为触发法律责任或后果 |
+| `localizes` | 地方规则细化/落实国家法节点 |
+| `conflicts_with` | 两个来源的主张看似冲突（标记，不要静默处理） |
+
+完整 schema v0.1（节点类型、边类型、source_type 信任分级、ingest 粒度、禁止项）见 `knowledge/AGENTS.md`。
 
 ## Current edges
 

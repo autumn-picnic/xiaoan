@@ -54,24 +54,97 @@ title: ""
 source_refs:
   - "knowledge/source/example.md#第十五条"
 updated: YYYY-MM-DD
-status: draft | reviewed | needs-review
+status: draft | needs-review | reviewed
 ---
 ```
 
 Legal node frontmatter should also include:
 
 ```yaml
-node_kind: definition | actor | duty | right | remedy | procedure | evidence | consequence | support
+node_kind: definition | actor | right | duty | remedy | procedure | condition | evidence | consequence | support | local-rule
 ```
+
+## Schema v0.1
+
+This is the frozen-enough working schema for the current phase. Treat it as a draft that may be refined with a legal reviewer, but use it consistently when ingesting.
+
+### Node kinds
+
+| `node_kind` | Meaning | Example |
+| --- | --- | --- |
+| `definition` | A legal definition or scope concept | 家庭暴力定义 |
+| `actor` | An institution or role with legal responsibilities | 公安机关、妇联、人民法院 |
+| `right` | A right the victim can invoke | 申请人身安全保护令的权利 |
+| `duty` | A duty/obligation imposed on an actor | 公安机关出警职责 |
+| `remedy` | A legal remedy or protective measure | 人身安全保护令、告诫书 |
+| `procedure` | A process/steps with conditions and timelines | 保护令申请流程 |
+| `condition` | A precondition/threshold for a remedy or duty | “面临家庭暴力现实危险” |
+| `evidence` | An evidence type or record | 出警记录、伤情鉴定意见 |
+| `consequence` | A legal liability/consequence | 违反保护令的法律责任 |
+| `support` | A support/aid channel | 法律援助、临时庇护、投诉渠道 |
+| `local-rule` | A province/city-specific rule node | 某省实施办法的细化条款 |
+
+### Edge relations
+
+| Relation | Meaning |
+| --- | --- |
+| `defines_scope_for` | A definition node bounds the scope of another node |
+| `triggers` | A fact/condition triggers a duty, procedure, or remedy |
+| `requires` | A remedy/procedure requires a condition or input |
+| `enables` | A node makes another node practically available |
+| `provides_evidence_for` | A record/procedure result can support later fact-finding |
+| `assists_execution_of` | An actor/procedure assists executing a remedy/ruling |
+| `parallel_support_channel_for` | A support channel runs parallel to another path |
+| `creates_consequence_for` | An act triggers a legal consequence |
+| `localizes` | A local-rule node refines/implements a national node |
+| `conflicts_with` | Two sourced claims appear to conflict (flag, do not silently resolve) |
+
+When unsure which relation fits, prefer adding the edge with `status: needs-review` rather than forcing a label.
+
+### Source types and trust priority
+
+Record `source_type` per source when ingesting (in the edge/node `source_refs` discussion or a future source registry). Higher tier = stronger authority for legal claims.
+
+| Tier | `source_type` | Examples |
+| --- | --- | --- |
+| 1 | `national_law` | 中华人民共和国反家庭暴力法 |
+| 1 | `judicial_interpretation` | 司法解释、审理指南 |
+| 2 | `local_regulation` | 省/市反家庭暴力条例、实施办法 |
+| 2 | `agency_rule` | 公安机关办理伤害案件规定、妇联工作规程 |
+| 3 | `official_manual` | 预防和制止家庭暴力警察/多部门工作手册 |
+| 3 | `practice_guide` | 法律法规与实务指南、保护令实务 |
+| 4 | `ngo_report` | 为平监测报告、案例汇编 |
+| 4 | `channel_directory` | 全国/各省投诉渠道 |
+
+Rules:
+- A higher-tier source overrides a lower-tier source when they conflict; record the conflict as a `conflicts_with` edge with `needs-review`.
+- Local regulations refine national law via `localizes`; never let a local rule silently contradict national law without a flag.
+- `channel_directory` and `ngo_report` must not be used to invent legal duties; they inform support/context nodes only.
+
+### Ingest granularity
+
+- Ingest one source at a time.
+- Extract nodes by legal function, not by article order. One node = one reusable legal concept; multiple articles can support one node, and one article can support multiple nodes.
+- Prefer reusing existing nodes over creating near-duplicates. If a province rule only adds detail, attach it via `localizes` instead of cloning the national node.
+- New legal claims default to `status: draft`; cross-source or interpretive claims default to `status: needs-review`.
+
+### Out of scope for the legal mechanism tree
+
+Do not put these into nodes/edges:
+- user-facing scripts or phrasing;
+- action recommendations without a cited source;
+- scenario capsules (Recognize/Act/Ground);
+- hotline numbers, shelter addresses, or institution contacts invented or copied as guidance.
 
 ## Ingest Workflow
 
 1. Read new raw legal sources in `knowledge/source/` without modifying them.
-2. Extract or update legal atom nodes under `knowledge/wiki/nodes/`.
-3. Add or update legal mechanism edges in `knowledge/wiki/edges.md`.
-4. Update `knowledge/wiki/legal-mechanism-tree.md` so the graph remains browsable in Obsidian.
-5. Update `knowledge/index.md`.
-6. Append one entry to `knowledge/log.md`.
+2. Record/confirm the source in `knowledge/wiki/source-registry.md` with its `source_type` and ingest status.
+3. Extract or update legal atom nodes under `knowledge/wiki/nodes/`.
+4. Add or update legal mechanism edges in `knowledge/wiki/edges.md`.
+5. Update `knowledge/wiki/legal-mechanism-tree.md` so the graph remains browsable in Obsidian.
+6. Update `knowledge/index.md`.
+7. Append one entry to `knowledge/log.md`.
 
 ## Legal Mechanism Tree Rules
 

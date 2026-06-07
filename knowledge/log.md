@@ -24,3 +24,10 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Moved initial legal atom pages into `knowledge/wiki/nodes/`.
 - Added [[edges]] as the mechanism edge catalog.
 - Removed separate legal mechanism pages that implied a misleading Legal Atom -> Legal Mechanism layer split.
+
+## [2026-06-07] schema-v0.1 | node/edge/source-type taxonomy
+
+- Added Schema v0.1 to `knowledge/AGENTS.md`: node kinds, edge relations, `source_type` trust tiers, ingest granularity, and out-of-scope rules.
+- Aligned `knowledge/wiki/edges.md` edge vocabulary with the schema.
+- Added [[source-registry]] cataloging all `knowledge/source/` files with `source_type`, tier, and ingest status, plus a pilot ingest batch.
+- Status conventions: new legal claims default to `draft`; cross-source/interpretive claims default to `needs-review`; legal-reviewer-confirmed claims become `reviewed`.
