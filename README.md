@@ -174,6 +174,7 @@ related_topics:
 - 建立评测集，对比 generic LLM、薄 flow 版本、soft RAG 版本。
 
 ### 知识库
-- 保留原始文档作为 source of truth，
-- 用llm-wiki从家暴相关的核心法律材料中抽取法律原子单元，构建反家暴相关的法律知识图谱作为llm knowledge layer
-- 同时建立场景化的节点作为 product layer。
+- 保留 `knowledge/source/` 原始文档作为 source of truth；
+- 按 `AGENTS.md` 的 llm-wiki 规则维护 `knowledge/wiki/`，从核心材料中抽取法律原子单元，构建反家暴相关的 legal mechanism layer；
+- 用 `knowledge/index.md` 做内容目录，用 `knowledge/log.md` 记录 ingest / query / lint 历史；
+- 同时建立 `knowledge/wiki/scenario-capsules/` 作为 product layer，并在进入生产前进行专家审核。

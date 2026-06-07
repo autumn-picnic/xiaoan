@@ -88,18 +88,28 @@
 
 ## 4.知识架构 
 ```
-Raw Sources
-法律 / 地方法规 / 司法解释 / 指南 / 案例 / 社工经验
+knowledge/source/
+原始法律 / 地方法规 / 司法解释 / 指南 / 案例 / 社工经验
         |
         v
-Legal Mechanism Tree
-把原始资料组织成“公安响应、证据、保护令”等机制
+knowledge/wiki/legal-atoms/
+从原始资料抽取可引用、可审计的法律原子单元
         |
         v
-Scenario Capsules
+knowledge/wiki/legal-mechanisms/
+把法律原子组织成“公安响应、证据、保护令”等机制
+        |
+        v
+knowledge/wiki/scenario-capsules/
 围绕具体用户痛点重组知识
         |
         |-- Recognize: 用户如何理解处境
         |-- Act: 用户下一步怎么做
         |-- Ground: 依据、边界、案例逻辑
 ```
+
+配套文件：
+
+- `AGENTS.md`：LLM 维护 wiki 的 schema 和操作规则。
+- `knowledge/index.md`：内容目录，回答和检索前优先阅读。
+- `knowledge/log.md`：按时间追加记录 ingest、query、lint 和重大维护。
