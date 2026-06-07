@@ -49,7 +49,7 @@ status: draft
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - 本节点 `localizes` -> [[domestic-violence-definition]]（网络手段、冻饿、禁闭等细化）。
 - 本节点 `localizes` -> [[public-security-response-duty]]（110接处警、告知义务、告诫书情形与时限）。

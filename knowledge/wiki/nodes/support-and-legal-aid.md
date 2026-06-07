@@ -51,7 +51,7 @@ status: draft
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - 本节点 `parallel_support_channel_for` → [[public-security-response-duty]]
 - 本节点 `parallel_support_channel_for` → [[personal-safety-protection-order]]

@@ -52,7 +52,7 @@ status: draft
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - [[domestic-violence-definition]] `defines_scope_for` 本节点。
 - 本节点 `provides_evidence_for` → [[personal-safety-protection-order]]

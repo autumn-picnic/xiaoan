@@ -157,6 +157,15 @@ Legal mechanisms are not a separate layer of pages. A mechanism is an edge: a so
 - Link the tree root to raw source filenames so Obsidian can visualize source-to-mechanism coverage without editing raw sources.
 - Prefer relationship labels such as `defines_scope_for`, `triggers`, `requires`, `enables`, `provides_evidence_for`, `assists_execution_of`, `limits`, `creates_consequence_for`, and `parallel_support_channel_for`.
 
+### Obsidian graph convention (important)
+
+Obsidian renders one node per `.md` file and one edge per `wikilink`. To keep the auto-rendered graph equal to the legal node/edge structure:
+
+- The single source of truth for graph edges is the node-to-node `wikilink` inside each node page's `## 机制关系` section. Every edge in `edges.md` must also exist as a node-to-node `wikilink` in a node page.
+- `edges.md` and `source-registry.md` must reference nodes/sources as plain inline code (`` `node-name` ``), NOT as `wikilinks`, so they do not become graph hubs.
+- Node pages must reference `edges.md` as plain text, not `[[edges]]`.
+- For a pure node-only graph in Obsidian, use the Graph filter `path:nodes`. Native graph edges are unlabeled; use a plugin (Breadcrumbs/Juggl) if labeled edges are needed.
+
 Scenario capsules are a later product layer and should remain untouched unless the user explicitly asks to work on them.
 
 ## Query Workflow

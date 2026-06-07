@@ -40,7 +40,7 @@ status: needs-review
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - 本节点 `enables` -> [[public-security-response-duty]]（把法定职责落成可操作流程）。
 - 本节点 `provides_evidence_for` -> [[protection-order-evidence]]（处警阶段收集固定证据）。

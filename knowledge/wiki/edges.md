@@ -11,6 +11,8 @@ status: draft
 
 本文件记录法律机制树中的边。每条边都应说明：从哪个法律原子节点出发、指向哪个节点、关系类型是什么、依据来自哪条原始法条。
 
+> Obsidian 约定：本表用纯文本（行内代码）引用节点，**不使用** `wikilink`，以免本文件在 graph view 里变成星型 hub。图上的边由各 node 页 `## 机制关系` 里的 node→node `wikilink` 承载，本表只是人/LLM 可读的带标签目录。
+
 ## Edge type vocabulary
 
 | Relation | Meaning |
@@ -32,23 +34,23 @@ status: draft
 
 | From | Relation | To | Claim | Source refs | Status |
 | --- | --- | --- | --- | --- | --- |
-| [[domestic-violence-definition]] | `defines_scope_for` | [[public-security-response-duty]] | “家庭暴力报案”触发公安机关及时出警、制止、调查取证、协助就医/鉴定伤情等职责。 | 反家暴法第2条、第13条、第15条 | draft |
-| [[domestic-violence-definition]] | `defines_scope_for` | [[personal-safety-protection-order]] | 遭受家庭暴力或面临家庭暴力现实危险，是申请人身安全保护令的核心事实基础。 | 反家暴法第2条、第23条、第27条 | draft |
-| [[public-security-response-duty]] | `provides_evidence_for` | [[personal-safety-protection-order]] | 公安机关出警记录、告诫书、伤情鉴定意见等可作为法院认定家庭暴力事实的证据来源；保护令相关事实判断可受这些证据支持，但法条第20条并不只限于保护令案件。 | 反家暴法第20条、第23条、第27条 | draft |
-| [[public-security-response-duty]] | `assists_execution_of` | [[personal-safety-protection-order]] | 法院作出保护令后，公安机关以及居民委员会、村民委员会等应当协助执行。 | 反家暴法第32条 | draft |
-| [[support-and-legal-aid]] | `parallel_support_channel_for` | [[public-security-response-duty]] | 单位、居委会/村委会、妇联等投诉求助渠道与公安报案路径并行，不能替代即时危险时的安全处理。 | 反家暴法第13条 | draft |
-| [[support-and-legal-aid]] | `parallel_support_channel_for` | [[personal-safety-protection-order]] | 法律援助和诉讼费用减免可支持受害人使用法院路径，但不等于保证个案结果。 | 反家暴法第19条、第23条 | draft |
-| [[protection-order-evidence]] | `provides_evidence_for` | [[personal-safety-protection-order]] | 多类证据（陈述、告诫书、出警记录、医疗记录、证人证言、伤情鉴定等）可用于支持保护令申请；证明标准为“较大可能性”。 | 人身安全保护令实务（转述法释〔2022〕17号第6条）；反家暴法第20条 | needs-review |
-| [[public-security-response-duty]] | `provides_evidence_for` | [[protection-order-evidence]] | 告诫书、出警记录、报警回执等公安记录是保护令证据的重要组成。 | 反家暴法第16-17条、第20条；人身安全保护令实务 | needs-review |
-| [[support-and-legal-aid]] | `provides_evidence_for` | [[protection-order-evidence]] | 妇联、居委会、救助机构收到投诉/求助的记录可作为保护令证据之一。 | 人身安全保护令实务（转述法释〔2022〕17号第6条） | needs-review |
-| [[public-security-response-duty]] | `enables` | [[injury-appraisal-procedure]] | 公安机关协助受害人就医、鉴定伤情，并按规定开具伤情鉴定委托书、规范现场处置。 | 反家暴法第15条；公安机关办理伤害案件规定第11-12条、第18-19条 | draft |
-| [[injury-appraisal-procedure]] | `provides_evidence_for` | [[protection-order-evidence]] | 伤情鉴定意见是保护令及后续认定家暴事实的重要证据来源。 | 公安机关办理伤害案件规定第18-19条；反家暴法第20条 | draft |
-| [[police-dv-handling-workflow]] | `enables` | [[public-security-response-duty]] | 警察五阶段工作流程把法定出警/处置职责落成可操作的现场流程。 | 预防和制止家庭暴力警察工作手册 | needs-review |
-| [[police-dv-handling-workflow]] | `provides_evidence_for` | [[protection-order-evidence]] | 处警阶段的现场处置与收集固定证据，为后续证据链提供来源。 | 预防和制止家庭暴力警察工作手册 | needs-review |
-| [[police-dv-handling-workflow]] | `conflicts_with` | [[public-security-response-duty]] | 手册成文较早，使用旧“保护裁定”表述且缺少告诫书制度，与现行反家暴法不完全一致，需核对。 | 预防和制止家庭暴力警察工作手册；反家暴法第16-17条、第23条 | needs-review |
-| [[guangdong-implementation]] | `localizes` | [[domestic-violence-definition]] | 广东办法把定义细化到冻饿、禁闭、跟踪骚扰，并将网络手段实施的恐吓/精神侵害纳入家庭暴力。 | 广东省实施办法第2条 | draft |
-| [[guangdong-implementation]] | `localizes` | [[public-security-response-duty]] | 广东办法细化110接处警、出警记录、告知义务，以及“应当出具告诫书”的情形与24小时时限。 | 广东省实施办法第23条、第25-28条 | draft |
-| [[guangdong-implementation]] | `localizes` | [[personal-safety-protection-order]] | 广东办法扩展代为/委托申请，增加“远离令”措施并可分批多次作出，细化公安24小时核实与协助执行。 | 广东省实施办法第31-33条 | draft |
+| `domestic-violence-definition` | `defines_scope_for` | `public-security-response-duty` | “家庭暴力报案”触发公安机关及时出警、制止、调查取证、协助就医/鉴定伤情等职责。 | 反家暴法第2条、第13条、第15条 | draft |
+| `domestic-violence-definition` | `defines_scope_for` | `personal-safety-protection-order` | 遭受家庭暴力或面临家庭暴力现实危险，是申请人身安全保护令的核心事实基础。 | 反家暴法第2条、第23条、第27条 | draft |
+| `public-security-response-duty` | `provides_evidence_for` | `personal-safety-protection-order` | 公安机关出警记录、告诫书、伤情鉴定意见等可作为法院认定家庭暴力事实的证据来源；保护令相关事实判断可受这些证据支持，但法条第20条并不只限于保护令案件。 | 反家暴法第20条、第23条、第27条 | draft |
+| `public-security-response-duty` | `assists_execution_of` | `personal-safety-protection-order` | 法院作出保护令后，公安机关以及居民委员会、村民委员会等应当协助执行。 | 反家暴法第32条 | draft |
+| `support-and-legal-aid` | `parallel_support_channel_for` | `public-security-response-duty` | 单位、居委会/村委会、妇联等投诉求助渠道与公安报案路径并行，不能替代即时危险时的安全处理。 | 反家暴法第13条 | draft |
+| `support-and-legal-aid` | `parallel_support_channel_for` | `personal-safety-protection-order` | 法律援助和诉讼费用减免可支持受害人使用法院路径，但不等于保证个案结果。 | 反家暴法第19条、第23条 | draft |
+| `protection-order-evidence` | `provides_evidence_for` | `personal-safety-protection-order` | 多类证据（陈述、告诫书、出警记录、医疗记录、证人证言、伤情鉴定等）可用于支持保护令申请；证明标准为“较大可能性”。 | 人身安全保护令实务（转述法释〔2022〕17号第6条）；反家暴法第20条 | needs-review |
+| `public-security-response-duty` | `provides_evidence_for` | `protection-order-evidence` | 告诫书、出警记录、报警回执等公安记录是保护令证据的重要组成。 | 反家暴法第16-17条、第20条；人身安全保护令实务 | needs-review |
+| `support-and-legal-aid` | `provides_evidence_for` | `protection-order-evidence` | 妇联、居委会、救助机构收到投诉/求助的记录可作为保护令证据之一。 | 人身安全保护令实务（转述法释〔2022〕17号第6条） | needs-review |
+| `public-security-response-duty` | `enables` | `injury-appraisal-procedure` | 公安机关协助受害人就医、鉴定伤情，并按规定开具伤情鉴定委托书、规范现场处置。 | 反家暴法第15条；公安机关办理伤害案件规定第11-12条、第18-19条 | draft |
+| `injury-appraisal-procedure` | `provides_evidence_for` | `protection-order-evidence` | 伤情鉴定意见是保护令及后续认定家暴事实的重要证据来源。 | 公安机关办理伤害案件规定第18-19条；反家暴法第20条 | draft |
+| `police-dv-handling-workflow` | `enables` | `public-security-response-duty` | 警察五阶段工作流程把法定出警/处置职责落成可操作的现场流程。 | 预防和制止家庭暴力警察工作手册 | needs-review |
+| `police-dv-handling-workflow` | `provides_evidence_for` | `protection-order-evidence` | 处警阶段的现场处置与收集固定证据，为后续证据链提供来源。 | 预防和制止家庭暴力警察工作手册 | needs-review |
+| `police-dv-handling-workflow` | `conflicts_with` | `public-security-response-duty` | 手册成文较早，使用旧“保护裁定”表述且缺少告诫书制度，与现行反家暴法不完全一致，需核对。 | 预防和制止家庭暴力警察工作手册；反家暴法第16-17条、第23条 | needs-review |
+| `guangdong-implementation` | `localizes` | `domestic-violence-definition` | 广东办法把定义细化到冻饿、禁闭、跟踪骚扰，并将网络手段实施的恐吓/精神侵害纳入家庭暴力。 | 广东省实施办法第2条 | draft |
+| `guangdong-implementation` | `localizes` | `public-security-response-duty` | 广东办法细化110接处警、出警记录、告知义务，以及“应当出具告诫书”的情形与24小时时限。 | 广东省实施办法第23条、第25-28条 | draft |
+| `guangdong-implementation` | `localizes` | `personal-safety-protection-order` | 广东办法扩展代为/委托申请，增加“远离令”措施并可分批多次作出，细化公安24小时核实与协助执行。 | 广东省实施办法第31-33条 | draft |
 
 ## Open edge gaps
 

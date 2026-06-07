@@ -83,7 +83,7 @@ status: draft
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - [[domestic-violence-definition]] `defines_scope_for` 本节点。
 - [[public-security-response-duty]] `provides_evidence_for` -> 本节点。

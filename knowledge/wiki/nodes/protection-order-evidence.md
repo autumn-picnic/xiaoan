@@ -41,7 +41,7 @@ status: needs-review
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - [[public-security-response-duty]] `provides_evidence_for` -> 本节点（告诫书、出警记录等）。
 - 本节点 `provides_evidence_for` -> [[personal-safety-protection-order]]

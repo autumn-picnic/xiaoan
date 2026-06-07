@@ -44,7 +44,7 @@ status: draft
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - [[public-security-response-duty]] `enables` -> 本节点（公安协助就医、鉴定伤情）。
 - 本节点 `provides_evidence_for` -> [[protection-order-evidence]]（伤情鉴定意见作为证据）。

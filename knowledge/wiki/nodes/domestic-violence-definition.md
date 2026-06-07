@@ -32,7 +32,7 @@ status: draft
 
 ## 机制关系
 
-详见 [[edges]]：
+详见 `edges.md`：
 
 - `defines_scope_for` → [[public-security-response-duty]]
 - `defines_scope_for` → [[personal-safety-protection-order]]
