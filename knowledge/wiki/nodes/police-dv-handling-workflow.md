@@ -43,6 +43,7 @@ status: needs-review
 详见 `edges.md`：
 
 - 本节点 `enables` -> [[public-security-response-duty]]（把法定职责落成可操作流程）。
+- 本节点 `enables` -> [[dv-risk-assessment]]（处警阶段进行危险评估）。
 - 本节点 `provides_evidence_for` -> [[protection-order-evidence]]（处警阶段收集固定证据）。
 - 本节点 `conflicts_with` -> [[public-security-response-duty]]（术语与制度滞后，需核对）。
 

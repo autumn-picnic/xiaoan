@@ -28,6 +28,7 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[protection-order-element-danger]] | element | Core constitutive element of the protection-order claim: suffered DV or facing real danger (第27条要件3). | 第27条、第2条、第23条 |
 | [[protection-order-evidence]] | evidence | Protection-order proof standard ("larger possibility") and evidence types; needs legal review (secondary source). | 人身安全保护令实务、第20条 |
 | [[injury-appraisal-procedure]] | procedure | Injury-appraisal commission/timelines and police case handling; mediation limits. | 公安机关办理伤害案件规定第11-39条 |
+| [[dv-risk-assessment]] | procedure | DV risk/lethality assessment and graded handling (妇联 scale + police manual). | 妇联规程；警察工作手册 |
 | [[police-dv-handling-workflow]] | procedure | Five-stage police DV workflow and risk assessment; predates 2016 law, needs review. | 预防和制止家庭暴力警察工作手册 |
 | [[guangdong-implementation]] | local-rule | Guangdong implementation specifics (online harassment as DV, mandatory warning-letter triggers, stay-away order). Guangdong only. | 广东省实施办法第2/23/25-33条 |
 | [[support-and-legal-aid]] | support | Complaint channels, temporary shelter, legal aid, fee relief, and organization support. | 第13条、第18-22条 |

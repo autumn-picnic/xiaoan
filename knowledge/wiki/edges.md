@@ -68,6 +68,8 @@ status: draft
 | `guangdong-implementation` | `localizes` | `domestic-violence-definition` | 广东办法把定义细化到冻饿、禁闭、跟踪骚扰，并将网络手段实施的恐吓/精神侵害纳入家庭暴力。 | 广东省实施办法第2条 | draft |
 | `guangdong-implementation` | `localizes` | `public-security-response-duty` | 广东办法细化110接处警、出警记录、告知义务，以及“应当出具告诫书”的情形与24小时时限。 | 广东省实施办法第23条、第25-28条 | draft |
 | `guangdong-implementation` | `localizes` | `personal-safety-protection-order` | 广东办法扩展代为/委托申请，增加“远离令”措施并可分批多次作出，细化公安24小时核实与协助执行。 | 广东省实施办法第31-33条 | draft |
+| `support-and-legal-aid` | `enables` | `dv-risk-assessment` | 妇联受理家暴投诉后按登记/危险评估/分级处理程序开展危险评估。 | 妇联组织受理家庭暴力投诉工作规程第6-11条 | draft |
+| `police-dv-handling-workflow` | `enables` | `dv-risk-assessment` | 警察处警阶段进行危险评估，识别高危信号。 | 预防和制止家庭暴力警察工作手册 | needs-review |
 
 ## Open edge gaps
 

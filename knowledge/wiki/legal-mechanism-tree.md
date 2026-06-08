@@ -29,7 +29,8 @@ status: draft
 - [[warning-letter]]：家庭暴力告诫书——出具条件、证据条件、送达、查访监督。
 - [[protection-order-element-danger]]：保护令核心要件——遭受家暴或面临现实危险（第27条要件3）。
 - [[protection-order-evidence]]：保护令证明标准与证据类型（需法律核对）。
-- [[injury-appraisal-procedure]]：伤情鉴定与公安受案处置、调解边界。
+- [[injury-appraisal-procedure]]：伤情鉴定与公安受案处置、调解边界、就医取证要点。
+- [[dv-risk-assessment]]：家庭暴力危险评估与分级处理（妇联量表 + 警察手册）。
 - [[police-dv-handling-workflow]]：警察处理家暴五阶段工作流程（实务，需核对）。
 - [[guangdong-implementation]]：广东省实施办法的地方细化（仅适用广东）。
 - [[support-and-legal-aid]]：投诉求助渠道、临时庇护、法律援助、诉讼费用减免、监护撤销和组织支持。
