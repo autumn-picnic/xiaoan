@@ -79,3 +79,10 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Wave 3 (18 provincial regulations): created synthesis `local-regulations-comparison` (delta matrix: 网络/经济/冻饿/目睹未成年人/告诫强制/远离令/强制报告/代为申请/热线/信息共享) instead of 18 near-duplicate nodes; kept guangdong-implementation as worked example. All marked done.
 - Graph now: 12 nodes, evidence routed through the element layer (请求权基础分析). 2 syntheses filed back.
 - Remaining needs-review: police-dv-handling-workflow (pre-2016), local-regulations-comparison (per-province 条号 verification), 法律援助法第32条 primary text not in source.
+
+## [2026-06-08] lint | resolve 法律援助法第32条 (was false "missing")
+
+- Traced the needs-review flag to its origin: `人身安全保护令实务.md` line 405 cites 《法律援助法》第32条 as a secondary claim.
+- Found the primary text was ALREADY in the corpus: `中国反家庭暴力法律法规与司法解释.md` §13 (法律援助法) line 325, 第三十二条 — the large compilation's section 13, missed in wave-1 first pass.
+- Resolved: added primary source_ref to `support-and-legal-aid` node; corrected scope ("主张相关权益" is broader than the secondary doc's "申请保护令"); checked off the synthesis review item; updated index gaps.
+- Lint lesson recorded: large multi-law compilations need per-section verification; first-pass ingest can miss later sections. Flagged in index Open Gaps.

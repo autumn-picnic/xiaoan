@@ -47,7 +47,7 @@ See [[edges]] for the current sourced relationship table.
 ## Open Gaps
 
 - All 32 sources in `knowledge/source/` are ingested (see [[source-registry]]). Pilot + full ingest complete.
-- `《法律援助法》` 第32条 原文仍未入库（法律援助不受经济困难限制的依据待补一手来源）。
 - 18 省条例已做横向对比 [[local-regulations-comparison]]（needs-review，待逐省条号复核）。
 - 旧《审理指南》（2008，“保护裁定”）多被现行法取代，是否单独建 superseded 节点待定。
+- Lint 教训：大型法规汇编（如 `中国反家庭暴力法律法规与司法解释.md`，含 14+ 节）首轮 ingest 易只覆盖前部；需逐节核查。`法律援助法第32条` 即属此情形（原已在第13节，曾误判为缺失）。
 - Scenario capsules are intentionally out of scope for the current phase.
