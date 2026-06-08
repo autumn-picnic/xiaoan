@@ -1,0 +1,221 @@
+# XiaoAn Legal Mechanism Wiki Guidelines
+
+## Purpose
+
+This `knowledge/` folder is an LLM-maintained legal mechanism wiki for XiaoAn, a domestic-violence first-response assistant. The current scope is the middle layer only: read immutable legal sources and maintain a source-grounded legal mechanism tree.
+
+Core model:
+
+```text
+knowledge/source/           # raw legal sources, user-owned, LLM read-only
+        |
+        v
+knowledge/wiki/             # legal mechanism tree, LLM-maintained
+        |-- nodes/           # legal atoms as graph nodes
+        |-- edges.md         # legal mechanisms as graph edges/relations
+        |-- legal-mechanism-tree.md
+        |
+        v
+scenario capsules           # future product layer, not maintained now
+```
+
+## Layers
+
+- `knowledge/source/`: immutable raw legal sources. The user owns this layer. Never edit, rewrite, rename, summarize in place, or normalize source files unless the user explicitly asks.
+- `knowledge/wiki/nodes/`: LLM-owned legal atom nodes. Each page should represent one legal concept, right, duty, remedy, actor, procedure, condition, evidence type, or consequence.
+- `knowledge/wiki/edges.md`: LLM-owned legal mechanism edge catalog. Each edge states how two legal nodes relate, with source references.
+- `knowledge/wiki/legal-mechanism-tree.md`: root page for browsing the current graph.
+- `knowledge/index.md`: content catalog for the legal mechanism tree. Update whenever a node or edge is created, renamed, or materially changed.
+- `knowledge/log.md`: chronological append-only activity log. Add an entry for every legal-source ingest, durable legal synthesis, or lint pass.
+- `knowledge/knowledge_strategy.md`: product and knowledge strategy context. Keep wiki changes aligned with it.
+
+Out of current scope:
+
+- Do not create or edit `knowledge/wiki/sources/` source-summary pages.
+- Do not create or edit `knowledge/wiki/scenario-capsules/` unless the user explicitly starts scenario-capsule work.
+- Do not turn legal mechanisms into a separate page layer. Mechanisms are edges/relations between legal atom nodes.
+
+## Wiki Page Conventions
+
+- Use Markdown files with YAML frontmatter.
+- Prefer Chinese for domain knowledge pages unless the source or task requires English.
+- Use stable, lowercase, hyphenated filenames for wiki pages.
+- Use Obsidian-style links such as `[[domestic-violence-definition]]` for internal cross-references.
+- Every synthesized claim that may influence user guidance must cite raw source references in a `source_refs` field or a `## 来源依据` section.
+- Distinguish source text, legal interpretation, and product-facing guidance. Do not collapse them into an uncited recommendation.
+- Mark unresolved conflicts, gaps, or uncertainty explicitly instead of smoothing them over.
+
+Recommended frontmatter:
+
+```yaml
+---
+type: legal-node | legal-edge-catalog | legal-mechanism-tree | legal-synthesis
+title: ""
+source_refs:
+  - "knowledge/source/example.md#第十五条"
+updated: YYYY-MM-DD
+status: draft | needs-review | reviewed
+---
+```
+
+Legal node frontmatter should also include:
+
+```yaml
+node_kind: definition | actor | right | duty | remedy | procedure | condition | evidence | consequence | support | local-rule
+```
+
+## Schema v0.1
+
+This is the frozen working schema for the current phase (frozen 2026-06-07). Refine only with explicit user sign-off or legal-reviewer feedback; use it consistently when ingesting.
+
+### Node kinds
+
+| `node_kind` | Meaning | Example |
+| --- | --- | --- |
+| `definition` | A legal definition or scope concept | 家庭暴力定义 |
+| `actor` | An institution or role with legal responsibilities | 公安机关、妇联、人民法院 |
+| `right` | A right the victim can invoke | 申请人身安全保护令的权利 |
+| `duty` | A duty/obligation imposed on an actor | 公安机关出警职责 |
+| `remedy` | A legal remedy or protective measure | 人身安全保护令、告诫书 |
+| `procedure` | A process/steps with conditions and timelines | 保护令申请流程 |
+| `condition` | A precondition/threshold for a remedy or duty | “面临家庭暴力现实危险” |
+| `element` | A constitutive requirement (要件) of a claim/remedy under 请求权基础分析 | 保护令第27条三要件之一 |
+| `evidence` | An evidence type or record | 出警记录、伤情鉴定意见 |
+| `consequence` | A legal liability/consequence | 违反保护令的法律责任 |
+| `support` | A support/aid channel | 法律援助、临时庇护、投诉渠道 |
+| `local-rule` | A province/city-specific rule node | 某省实施办法的细化条款 |
+
+### Edge relations
+
+Eight relations (v0.3, 2026-06-07). v0.2 consolidated 10->6; v0.3 adds the two **requirement-layer** relations (`is_element_of`, `proves`) that encode how lawyers actually reason (请求权基础分析法 / claim-basis analysis). These are the doctrinal core, not bloat.
+
+| Relation | Meaning |
+| --- | --- |
+| `defines_scope_for` | A definition/condition node bounds whether and how far another node applies (absorbs "fact/condition triggers a duty or remedy") |
+| `is_element_of` | An element node (要件) is a constitutive requirement of a claim/remedy (请求权基础) |
+| `proves` | An evidence node proves/supports a specific element (要件), not a remedy in general |
+| `provides_evidence_for` | A source node (actor/duty/procedure/support) generates a record that counts as evidence |
+| `enables` | A node makes another practically available or executable (absorbs "assists executing a remedy/ruling") |
+| `parallel_support_channel_for` | A support channel runs parallel to another path, as a supplement not a replacement (navigation, not doctrine) |
+| `localizes` | A local-rule node refines/implements a national node (cross-level) |
+| `creates_consequence_for` | An act/violation triggers a legal liability/consequence node |
+| `conflicts_with` | Two sourced claims appear to conflict (flag, do not silently resolve) |
+
+### The lawyer's reasoning chain (请求权基础分析)
+
+Model evidence the way a lawyer does — never evidence straight to remedy. Always route through the element:
+
+```
+来源 (actor/duty/procedure/support)
+   --provides_evidence_for-->  证据 (evidence)
+   --proves-->                 要件 (element)
+   --is_element_of-->          请求权/救济 (remedy)
+定义 (definition) --defines_scope_for--> 要件 (element)   # 定义界定要件的含义
+```
+
+`parallel_support_channel_for` is a help-seeking navigation relation, not a legal doctrine; keep it but do not treat it as part of the claim-basis chain.
+
+Deleted in v0.2 (still excluded): `triggers` (folded into `defines_scope_for`), `assists_execution_of` (folded into `enables`), `requires` (inverse direction, express via From->To), and `limits` (unused). `creates_consequence_for` was re-introduced in v0.4 once a real consequence node (`liability-ladder`) existed.
+
+When unsure which relation fits, prefer adding the edge with `status: needs-review` rather than forcing a label.
+
+### Source types and trust priority
+
+Record `source_type` per source when ingesting (in the edge/node `source_refs` discussion or a future source registry). Higher tier = stronger authority for legal claims.
+
+| Tier | `source_type` | Examples |
+| --- | --- | --- |
+| 1 | `national_law` | 中华人民共和国反家庭暴力法 |
+| 1 | `judicial_interpretation` | 司法解释、审理指南 |
+| 2 | `local_regulation` | 省/市反家庭暴力条例、实施办法 |
+| 2 | `agency_rule` | 公安机关办理伤害案件规定、妇联工作规程 |
+| 3 | `official_manual` | 预防和制止家庭暴力警察/多部门工作手册 |
+| 3 | `practice_guide` | 法律法规与实务指南、保护令实务 |
+| 4 | `ngo_report` | 为平监测报告、案例汇编 |
+| 4 | `channel_directory` | 全国/各省投诉渠道 |
+
+Rules:
+- A higher-tier source overrides a lower-tier source when they conflict; record the conflict as a `conflicts_with` edge with `needs-review`.
+- Local regulations refine national law via `localizes`; never let a local rule silently contradict national law without a flag.
+- `channel_directory` and `ngo_report` must not be used to invent legal duties; they inform support/context nodes only.
+
+### Ingest granularity
+
+- Ingest one source at a time.
+- Extract nodes by legal function, not by article order. One node = one reusable legal concept; multiple articles can support one node, and one article can support multiple nodes.
+- Prefer reusing existing nodes over creating near-duplicates. If a province rule only adds detail, attach it via `localizes` instead of cloning the national node.
+- New legal claims default to `status: draft`; cross-source or interpretive claims default to `status: needs-review`.
+
+### Out of scope for the legal mechanism tree
+
+Do not put these into nodes/edges:
+- user-facing scripts or phrasing;
+- action recommendations without a cited source;
+- scenario capsules (Recognize/Act/Ground);
+- hotline numbers, shelter addresses, or institution contacts invented or copied as guidance.
+
+## Ingest Workflow
+
+1. Read new raw legal sources in `knowledge/source/` without modifying them.
+2. Record/confirm the source in `knowledge/wiki/source-registry.md` with its `source_type` and ingest status.
+3. Extract or update legal atom nodes under `knowledge/wiki/nodes/`.
+4. Add or update legal mechanism edges in `knowledge/wiki/edges.md`.
+5. Update `knowledge/wiki/legal-mechanism-tree.md` so the graph remains browsable in Obsidian.
+6. Update `knowledge/index.md`.
+7. Append one entry to `knowledge/log.md`.
+
+## Legal Mechanism Tree Rules
+
+Legal mechanisms are not a separate layer of pages. A mechanism is an edge: a sourced relationship between two legal atom nodes.
+
+- Use source-backed nodes and source-backed edges, not free-form advice.
+- Keep atomic legal claims in `nodes/`.
+- Keep relationship metadata in `edges.md`.
+- Express graph links using Obsidian links in node pages so the graph view remains useful.
+- Link the tree root to raw source filenames so Obsidian can visualize source-to-mechanism coverage without editing raw sources.
+- Use one of the six relations: `defines_scope_for`, `provides_evidence_for`, `enables`, `parallel_support_channel_for`, `localizes`, `conflicts_with`. If none fits, add the edge with `status: needs-review` rather than inventing a label.
+
+### Obsidian graph convention (important)
+
+Obsidian renders one node per `.md` file and one edge per `wikilink`. To keep the auto-rendered graph equal to the legal node/edge structure:
+
+- The single source of truth for graph edges is the node-to-node `wikilink` inside each node page's `## 机制关系` section. Every edge in `edges.md` must also exist as a node-to-node `wikilink` in a node page.
+- `edges.md` and `source-registry.md` must reference nodes/sources as plain inline code (`` `node-name` ``), NOT as `wikilinks`, so they do not become graph hubs.
+- Node pages must reference `edges.md` as plain text, not `[[edges]]`.
+- For a pure node-only graph in Obsidian, use the Graph filter `path:nodes`. Native graph edges are unlabeled; use a plugin (Breadcrumbs/Juggl) if labeled edges are needed.
+
+Scenario capsules are a later product layer and should remain untouched unless the user explicitly asks to work on them.
+
+## Query Workflow
+
+1. Read `knowledge/index.md` first.
+2. Open relevant node pages in `knowledge/wiki/nodes/`.
+3. Open `knowledge/wiki/edges.md` for sourced relationships between nodes.
+4. Answer with source-grounded synthesis and cite node/source references.
+5. If the answer reveals a durable legal node or edge, update the wiki and log it. Do not create scenario capsules by default.
+
+## Lint Workflow
+
+Periodically check for:
+
+- nodes with no source references;
+- edges whose source or target node does not exist;
+- important raw sources not yet represented in the graph;
+- duplicate nodes for the same legal concept;
+- edge claims that overstate what the source says;
+- national/local rule conflicts or local refinements that need explicit edge labels;
+- Obsidian links that do not resolve.
+
+## Safety and Legal Boundaries
+
+- High-risk signals override knowledge retrieval in product use. If the user is in immediate danger, prioritize crisis SOP behavior over legal completeness.
+- Never invent institutions, hotline numbers, shelter addresses, case law, or local procedures.
+- Do not promise outcomes such as "police will definitely handle it" or "the court will approve it."
+- For individual legal strategy, frame content as rights education and suggest professional legal aid when needed.
+- Preserve privacy: do not store raw user PII in wiki pages or examples.
+
+## Maintenance
+
+- When answering a legal question produces durable synthesis, file it back into the legal mechanism tree and index it.
+- Periodically lint the legal mechanism tree for orphan pages, stale claims, missing citations, duplicate concepts, and source coverage gaps.
+- Prefer small, well-cited pages over long uncited essays.

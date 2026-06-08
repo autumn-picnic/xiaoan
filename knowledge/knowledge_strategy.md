@@ -88,18 +88,33 @@
 
 ## 4.知识架构 
 ```
-Raw Sources
-法律 / 地方法规 / 司法解释 / 指南 / 案例 / 社工经验
+knowledge/source/
+原始法律 / 地方法规 / 司法解释 / 指南 / 案例 / 社工经验
         |
         v
-Legal Mechanism Tree
-把原始资料组织成“公安响应、证据、保护令”等机制
+knowledge/wiki/
+法律机制树：legal atoms 是节点，legal mechanisms 是边
+        |-- nodes/: 法律原子节点
+        |-- edges.md: 机制关系 / 边
+        |-- legal-mechanism-tree.md: 图谱入口
         |
         v
-Scenario Capsules
-围绕具体用户痛点重组知识
+Scenario Capsules（后续 product layer）
+围绕具体用户痛点重组知识，当前阶段暂不创建
         |
         |-- Recognize: 用户如何理解处境
         |-- Act: 用户下一步怎么做
         |-- Ground: 依据、边界、案例逻辑
 ```
+
+配套文件：
+
+- `AGENTS.md`：LLM 维护 wiki 的 schema 和操作规则。
+- `knowledge/index.md`：内容目录，回答和检索前优先阅读。
+- `knowledge/log.md`：按时间追加记录 ingest、query、lint 和重大维护。
+
+当前维护边界：
+
+- `knowledge/source/` 原始法条永远只读，由用户添加和维护。
+- LLM 只维护 `knowledge/wiki/` 中的法律机制树：节点、边、索引和日志。
+- 场景胶囊之后由用户和 LLM 一起更新，当前阶段不创建。
