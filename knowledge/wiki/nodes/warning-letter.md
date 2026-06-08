@@ -52,6 +52,7 @@ status: draft
 - [[public-security-response-duty]] `enables` -> 本节点（公安出具与送达）。
 - 本节点 `provides_evidence_for` -> [[protection-order-evidence]]（告诫书是11类证据之一）。
 - 本节点 `enables` -> [[temporary-shelter]]（告诫书可作申请庇护的凭证）。
+- 本节点 `defines_scope_for` -> [[liability-ladder]]（告诫对应“情节较轻不予处罚”一层）。
 
 ## 来源依据
 

@@ -89,7 +89,9 @@ status: draft
 - [[protection-order-element-danger]] `is_element_of` -> 本节点（核心权利发生要件）。
 - [[public-security-response-duty]] `enables` -> 本节点（协助执行保护令）。
 - 本节点 `provides_evidence_for` -> [[divorce-and-dv]]（保护令及违反情形作为离婚/再诉事实依据之一）。
+- 本节点 `creates_consequence_for` -> [[liability-ladder]]（违反保护令触发训诫/罚款/拘留/刑责）。
 - [[support-and-legal-aid]] `parallel_support_channel_for` -> 本节点。
+- [[local-regulations-comparison]] `localizes` -> 本节点（远离令、代为申请、协助执行等地方细化）。
 
 ## 来源依据
 

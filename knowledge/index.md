@@ -25,6 +25,7 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[public-security-response-duty]] | duty | Public security duties after a domestic-violence report: dispatch, stop violence, investigate evidence, assist medical care/appraisal. | 第13-17条、第20条 |
 | [[personal-safety-protection-order]] | remedy | Protection order eligibility, applicants, jurisdiction, timing, measures, duration, execution, and consequences of violation. | 第23-34条 |
 | [[warning-letter]] | remedy | Police warning letter (告诫书): issuance conditions, evidence conditions, service, follow-up. | 第16-17条；公通字〔2024〕34号 |
+| [[liability-ladder]] | consequence | DV liability ladder: criticism → warning letter → public-security penalty → criminal liability; protection-order violation. | 第16、33、34条 |
 | [[guardianship-revocation]] | remedy | Revocation of guardianship for severe DV against a ward; support duties survive. | 第21条 |
 | [[special-protection-groups]] | definition | Minors, elderly, disabled, pregnant/nursing women, seriously ill — special protection. | 第5条 |
 | [[child-witness-victim]] | definition | Minors who witness DV treated as victims (local regulations; not in national law). | 重庆/甘肃/黑龙江条例 |
@@ -36,7 +37,6 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[injury-appraisal-procedure]] | procedure | Injury-appraisal commission/timelines and police case handling; mediation limits. | 公安机关办理伤害案件规定第11-39条 |
 | [[dv-risk-assessment]] | procedure | DV risk/lethality assessment and graded handling (妇联 scale + police manual). | 妇联规程；警察工作手册 |
 | [[police-dv-handling-workflow]] | procedure | Five-stage police DV workflow and risk assessment; predates 2016 law, needs review. | 预防和制止家庭暴力警察工作手册 |
-| [[guangdong-implementation]] | local-rule | Guangdong implementation specifics (online harassment as DV, mandatory warning-letter triggers, stay-away order). Guangdong only. | 广东省实施办法第2/23/25-33条 |
 | [[support-and-legal-aid]] | support | Complaint channels, temporary shelter, legal aid, fee relief, and organization support. | 第13条、第18-22条 |
 
 ## Legal Mechanism Edges

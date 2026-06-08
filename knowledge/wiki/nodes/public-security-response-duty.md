@@ -59,6 +59,7 @@ status: draft
 - 本节点 `enables` → [[warning-letter]]（出具、送达告诫书并查访监督）
 - 本节点 `enables` → [[temporary-shelter]]（协助安置危险状态的无/限制民事行为能力人）
 - [[mandatory-reporting]] `enables` → 本节点（机构强制报案触发处置）
+- [[local-regulations-comparison]] `localizes` → 本节点（110接处警、告知义务、告诫书强制情形）
 - [[support-and-legal-aid]] `parallel_support_channel_for` → 本节点
 
 ## 来源依据

@@ -133,7 +133,7 @@ protection-order-evidence  ──proves──▶  protection-order-element-dange
 - 协助执行：`public-security-response-duty` --enables--> `personal-safety-protection-order`
 - 并行求助渠道：`support-and-legal-aid` --parallel_support_channel_for--> `personal-safety-protection-order`
 - 告诫书：`warning-letter` --provides_evidence_for--> `protection-order-evidence`；`public-security-response-duty` --enables--> `warning-letter`
-- 地方细化：`guangdong-implementation` --localizes--> `personal-safety-protection-order`
+- 地方细化：`local-regulations-comparison` --localizes--> `personal-safety-protection-order`
 
 ---
 

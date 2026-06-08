@@ -70,5 +70,5 @@ status: draft
 
 ## Ingest 说明（wave 3）
 
-- 18 个省级条例/实施办法均与国家《反家庭暴力法》构成 `localizes` 关系。为避免 18 个近似节点污染图谱，统一在 [[local-regulations-comparison]] 做横向细化对比；广东省保留 [[guangdong-implementation]] 作为 worked example 节点。
+- 18 个省级条例/实施办法均与国家《反家庭暴力法》构成 `localizes` 关系。为避免 18 个近似节点污染图谱，统一在 [[local-regulations-comparison]] 做横向细化对比；18 省一视同仁，不单设某一省的独立节点。
 - 该对比页标 needs-review：矩阵基于关键词与定义条款抽取，具体条号待逐省复核。

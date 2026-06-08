@@ -15,7 +15,7 @@ status: draft
 
 ## Edge type vocabulary
 
-8 种关系（v0.3，2026-06-07）。v0.2 把 10→6；v0.3 加回**要件层**的 `is_element_of` 与 `proves`——这是律师“请求权基础分析法”的核心,不是冗余。
+9 种关系（v0.4，2026-06-08）。v0.2 把 10→6；v0.3 加回**要件层** `is_element_of`/`proves`；v0.4 因出现真实 consequence 节点（[[liability-ladder]]）加回 `creates_consequence_for`。
 
 | Relation | Meaning |
 | --- | --- |
@@ -24,6 +24,7 @@ status: draft
 | `proves` | 证据节点**证明某个要件**（而不是泛泛支撑某救济） |
 | `provides_evidence_for` | 来源节点（机构/义务/程序/支持）产出的记录构成证据 |
 | `enables` | 一个节点使另一个节点在实践中**可用或得以执行**（含协助执行裁定） |
+| `creates_consequence_for` | 一个行为/违反触发法律责任或后果节点 |
 | `parallel_support_channel_for` | 支持渠道与另一路径并行，是补充而非替代（求助导航，非法律doctrine） |
 | `localizes` | 地方规则细化/落实国家法节点（跨层级） |
 | `conflicts_with` | 两个来源的主张看似冲突（标记，不要静默处理） |
@@ -65,9 +66,9 @@ status: draft
 | `police-dv-handling-workflow` | `enables` | `public-security-response-duty` | 警察五阶段工作流程把法定出警/处置职责落成可操作的现场流程。 | 预防和制止家庭暴力警察工作手册 | needs-review |
 | `police-dv-handling-workflow` | `provides_evidence_for` | `protection-order-evidence` | 处警阶段的现场处置与收集固定证据，为后续证据链提供来源。 | 预防和制止家庭暴力警察工作手册 | needs-review |
 | `police-dv-handling-workflow` | `conflicts_with` | `public-security-response-duty` | 手册成文较早，使用旧“保护裁定”表述且缺少告诫书制度，与现行反家暴法不完全一致，需核对。 | 预防和制止家庭暴力警察工作手册；反家暴法第16-17条、第23条 | needs-review |
-| `guangdong-implementation` | `localizes` | `domestic-violence-definition` | 广东办法把定义细化到冻饿、禁闭、跟踪骚扰，并将网络手段实施的恐吓/精神侵害纳入家庭暴力。 | 广东省实施办法第2条 | draft |
-| `guangdong-implementation` | `localizes` | `public-security-response-duty` | 广东办法细化110接处警、出警记录、告知义务，以及“应当出具告诫书”的情形与24小时时限。 | 广东省实施办法第23条、第25-28条 | draft |
-| `guangdong-implementation` | `localizes` | `personal-safety-protection-order` | 广东办法扩展代为/委托申请，增加“远离令”措施并可分批多次作出，细化公安24小时核实与协助执行。 | 广东省实施办法第31-33条 | draft |
+| `local-regulations-comparison` | `localizes` | `domestic-violence-definition` | 地方条例普遍扩展定义：网络手段、冻饿、禁闭、经济控制、跟踪骚扰等（广东第2条、重庆第2条、甘肃/黑龙江第3条等）。 | 18省条例定义条款 | draft |
+| `local-regulations-comparison` | `localizes` | `public-security-response-duty` | 地方条例细化110接处警、出警记录、告知义务，以及“应当出具告诫书”的情形与24小时时限（广东第23/25-28条等）。 | 广东、山东、重庆等条例 | draft |
+| `local-regulations-comparison` | `localizes` | `personal-safety-protection-order` | 地方条例扩展代为/委托申请，增加“远离令”并可分批多次作出，细化公安24小时核实与协助执行（广东第31-33条等）。 | 广东、云南、重庆等条例 | draft |
 | `support-and-legal-aid` | `enables` | `dv-risk-assessment` | 妇联受理家暴投诉后按登记/危险评估/分级处理程序开展危险评估。 | 妇联组织受理家庭暴力投诉工作规程第6-11条 | draft |
 | `police-dv-handling-workflow` | `enables` | `dv-risk-assessment` | 警察处警阶段进行危险评估，识别高危信号。 | 预防和制止家庭暴力警察工作手册 | needs-review |
 | `domestic-violence-definition` | `defines_scope_for` | `mandatory-reporting` | 家暴/疑似家暴的认定界定机构强制报告义务的触发。 | 反家暴法第14条 | draft |
@@ -84,6 +85,9 @@ status: draft
 | `local-regulations-comparison` | `localizes` | `child-witness-victim` | 目睹家暴未成年人为地方扩展概念，国家法无明文。 | 重庆/甘肃/黑龙江条例 | needs-review |
 | `domestic-violence-definition` | `defines_scope_for` | `divorce-and-dv` | 家暴认定界定离婚法定理由与损害赔偿依据。 | 民法典婚姻家庭编；审理指南第17条 | needs-review |
 | `personal-safety-protection-order` | `provides_evidence_for` | `divorce-and-dv` | 保护令及违反情形可作为离婚/再诉中综合认定家暴事实的依据之一。 | 法释〔2022〕17号第十一条 | draft |
+| `domestic-violence-definition` | `defines_scope_for` | `liability-ladder` | 家暴认定是适用批评教育/告诫/治安/刑事各层责任的前提。 | 反家暴法第16、33条 | draft |
+| `warning-letter` | `defines_scope_for` | `liability-ladder` | 告诫对应“情节较轻、不予治安处罚”一层，与治安/刑事处罚层互斥。 | 反家暴法第16条；公通字〔2024〕34号第一条 | draft |
+| `personal-safety-protection-order` | `creates_consequence_for` | `liability-ladder` | 违反保护令触发训诫、1000元以下罚款、15日以下拘留或刑事责任。 | 反家暴法第34条 | draft |
 
 ## Open edge gaps
 

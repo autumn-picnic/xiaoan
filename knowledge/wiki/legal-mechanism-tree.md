@@ -32,7 +32,6 @@ status: draft
 - [[injury-appraisal-procedure]]：伤情鉴定与公安受案处置、调解边界、就医取证要点。
 - [[dv-risk-assessment]]：家庭暴力危险评估与分级处理（妇联量表 + 警察手册）。
 - [[police-dv-handling-workflow]]：警察处理家暴五阶段工作流程（实务，需核对）。
-- [[guangdong-implementation]]：广东省实施办法的地方细化（仅适用广东）。
 - [[support-and-legal-aid]]：投诉求助渠道、临时庇护、法律援助、诉讼费用减免、监护撤销和组织支持。
 - [[special-protection-groups]]：特殊保护群体（未成年人、老年人、残疾人、孕期哺乳期妇女、重病患者）。
 - [[mandatory-reporting]]：机构强制报告制度（第14、35条）。
@@ -40,6 +39,7 @@ status: draft
 - [[temporary-shelter]]：临时庇护场所设立、公安协助安置、告诫书作凭证。
 - [[child-witness-victim]]：目睹家暴的未成年人（地方扩展，需核对）。
 - [[divorce-and-dv]]：离婚诉讼与家庭暴力（家暴离婚理由、再诉新情况、分手暴力）。
+- [[liability-ladder]]：家暴法律责任阶梯——批评教育/告诫/治安处罚/刑事责任。
 
 ## 综合分析（filed back）
 

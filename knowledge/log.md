@@ -99,3 +99,12 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Added 15 edges; back-links added to existing node pages so Obsidian graph renders them.
 - Graph: 17 nodes, 36 edges. defines_scope_for 9, enables 9, provides_evidence_for 6, localizes 6, parallel 3, is_element_of/proves/conflicts_with 1 each.
 - Deferred: admonishment-vs-punishment (治安/刑事 vs 告诫) kept inline rather than split, to avoid over-fragmentation.
+
+## [2026-06-08] refactor | merge Guangdong into comparison; add liability-ladder; schema v0.4
+
+- Q from user exposed an inconsistency: guangdong-implementation was a standalone node while 17 other provinces lived in the comparison synthesis — guangdong was special only because it was done first (historical accident, not design).
+- Also found a 0-byte stray `nodes/local-regulations-comparison.md` (auto-created by Obsidian when following the [[link]]); deleted.
+- Chose option A: merged Guangdong's specifics into `syntheses/local-regulations-comparison.md` (added as 4th 标志性条款 province), deleted `nodes/guangdong-implementation.md`, rerouted its 3 localizes edges to originate from local-regulations-comparison (now connects definition/public-security/protection-order). 18 provinces now treated uniformly.
+- Split out `liability-ladder` (consequence node): 批评教育 → 告诫书(行政指导) → 治安处罚 → 刑事责任, plus protection-order-violation penalties (第34条). Clarifies 告诫 vs 治安/刑事 distinction the user asked about.
+- Schema v0.4: re-introduced `creates_consequence_for` now that a real consequence node exists (protection-order --creates_consequence_for--> liability-ladder). Documented in AGENTS.md + edges.md vocab (now 9 relations).
+- Graph: 17 nodes (−1 guangdong +1 liability-ladder), 39 edges, all valid, no broken links.

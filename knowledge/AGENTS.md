@@ -98,6 +98,7 @@ Eight relations (v0.3, 2026-06-07). v0.2 consolidated 10->6; v0.3 adds the two *
 | `enables` | A node makes another practically available or executable (absorbs "assists executing a remedy/ruling") |
 | `parallel_support_channel_for` | A support channel runs parallel to another path, as a supplement not a replacement (navigation, not doctrine) |
 | `localizes` | A local-rule node refines/implements a national node (cross-level) |
+| `creates_consequence_for` | An act/violation triggers a legal liability/consequence node |
 | `conflicts_with` | Two sourced claims appear to conflict (flag, do not silently resolve) |
 
 ### The lawyer's reasoning chain (请求权基础分析)
@@ -114,7 +115,7 @@ Model evidence the way a lawyer does — never evidence straight to remedy. Alwa
 
 `parallel_support_channel_for` is a help-seeking navigation relation, not a legal doctrine; keep it but do not treat it as part of the claim-basis chain.
 
-Deleted in v0.2 (still excluded): `triggers` (folded into `defines_scope_for`), `assists_execution_of` (folded into `enables`), `requires` (inverse direction, express via From->To), `creates_consequence_for` and `limits` (unused; keep consequence info inside the node until a consequence node is split out).
+Deleted in v0.2 (still excluded): `triggers` (folded into `defines_scope_for`), `assists_execution_of` (folded into `enables`), `requires` (inverse direction, express via From->To), and `limits` (unused). `creates_consequence_for` was re-introduced in v0.4 once a real consequence node (`liability-ladder`) existed.
 
 When unsure which relation fits, prefer adding the edge with `status: needs-review` rather than forcing a label.
 

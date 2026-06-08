@@ -40,6 +40,8 @@ status: draft
 - `defines_scope_for` → [[guardianship-revocation]]（严重侵害被监护人界定撤销监护）
 - `defines_scope_for` → [[child-witness-victim]]（地方层面扩展受害人范围）
 - `defines_scope_for` → [[divorce-and-dv]]（界定离婚理由与损害赔偿依据）
+- `defines_scope_for` → [[liability-ladder]]（家暴认定是各层责任的前提）
+- [[local-regulations-comparison]] `localizes` → 本节点（网络/冻饿/经济控制/目睹等定义扩展）
 
 ## 来源依据
 
