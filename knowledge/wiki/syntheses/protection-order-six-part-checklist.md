@@ -7,8 +7,8 @@ source_refs:
   - "knowledge/source/人身安全保护令实务.md"
   - "knowledge/source/公安机关办理伤害案件规定.md"
   - "knowledge/source/广东省实施《中华人民共和国反家庭暴力法》办法.md"
-updated: 2026-06-07
-status: needs-review
+updated: 2026-06-08
+status: draft
 ---
 
 # 人身安全保护令｜六段式要件清单
@@ -61,7 +61,7 @@ status: needs-review
 
 ## 四、被申请人抗辩（被告抗辩）
 
-实务来源显示，以下抗辩**常见但多不应成立**；列出以便预判与反驳（评价依保护令实务文档，needs-review）：
+实务来源显示，以下抗辩**常见但多不应成立**；列出以便预判与反驳：
 
 | 被申请人抗辩 | 是否成立 | 理由 |
 | --- | --- | --- |
@@ -70,9 +70,9 @@ status: needs-review
 | 已认错 / 出具悔过书、保证书 | ✗ 不成立 | 道歉保证不视为真心悔改；悔过书反而可作家暴**证据** |
 | 暴力频率低 / 非近期发生 | ✗ 不成立 | 针对“现实危险”，不以频繁为前提 |
 | 存在其他纠纷（房产、家庭琐事） | ✗ 不成立 | 纠纷的存在不能为暴力辩护 |
-| 称申请人有过错 / 有疾病 | ✗ 不成立 | 认可施暴但称对方有过错，不影响核发 |
+| 称申请人有过错 / 有疾病 | ✗ 不成立 | **法释〔2022〕17号第八条**：被申请人认可家暴但辩称申请人有过错的，不影响作出保护令 |
 
-⚠️ 引用存疑（needs-review）：实务文档将最后一项依据写为“《反家暴法》第八条”，但反家暴法第八条文义为乡镇政府组织预防工作，与此不符，**疑为《涉及家庭暴力婚姻案件审理指南》条款的误引**，待法律专业人士核对。
+✅ 已解决（原 needs-review）：实务文档所引“第八条”经一手来源核对，对应**法释〔2022〕17号第八条**（已入库），并非误引《反家暴法》第八条。此外《审理指南》第八条另有“家暴非受害人过错”的原则性表述，二者相互印证。
 
 ---
 
@@ -132,14 +132,22 @@ protection-order-evidence  ──proves──▶  protection-order-element-dange
 - 证据来源：`public-security-response-duty` / `injury-appraisal-procedure` / `police-dv-handling-workflow` / `support-and-legal-aid` --provides_evidence_for--> `protection-order-evidence`
 - 协助执行：`public-security-response-duty` --enables--> `personal-safety-protection-order`
 - 并行求助渠道：`support-and-legal-aid` --parallel_support_channel_for--> `personal-safety-protection-order`
+- 告诫书：`warning-letter` --provides_evidence_for--> `protection-order-evidence`；`public-security-response-duty` --enables--> `warning-letter`
 - 地方细化：`guangdong-implementation` --localizes--> `personal-safety-protection-order`
 
 ---
 
 ## 复核清单（交法律专业人士）
 
-- [ ] “较大可能性”证明标准、11类证据：法释〔2022〕17号原文待补
-- [ ] “第八条”抗辩依据：疑为《审理指南》误引为《反家暴法》，待核
-- [ ] 法律援助不受经济困难限制：《法律援助法》第32条原文待补
-- [ ] 远离令、电话/短信骚扰禁令等扩展措施：法释〔2022〕17号原文待补
+已解决（一手来源已入库 `中国反家庭暴力法律法规与司法解释.md`）：
+
+- [x] “较大可能性”证明标准、11类证据 → 法释〔2022〕17号第六条
+- [x] “第八条”抗辩依据 → 法释〔2022〕17号第八条（非误引；《审理指南》第八条另证“家暴非受害人过错”原则）
+- [x] 远离令、电话/短信骚扰禁令等扩展措施 → 法释〔2022〕17号第十条
+- [x] 代为申请主体扩展 → 法释〔2022〕17号第二条
+
+仍待核：
+
+- [ ] 法律援助不受经济困难限制：《法律援助法》第32条原文仍不在 `knowledge/source/`，待补
 - [ ] 是否需要把其余两项要件（明确被申请人、具体请求）也建为 element 节点
+- [ ] 旧《审理指南》（2008，“保护裁定”、48小时、紧急15天）多被现行法取代，是否单独建 superseded 标注节点

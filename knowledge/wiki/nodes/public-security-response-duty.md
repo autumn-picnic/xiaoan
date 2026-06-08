@@ -56,6 +56,7 @@ status: draft
 
 - [[domestic-violence-definition]] `defines_scope_for` 本节点。
 - 本节点 `enables` → [[personal-safety-protection-order]]（协助执行保护令）
+- 本节点 `enables` → [[warning-letter]]（出具、送达告诫书并查访监督）
 - [[support-and-legal-aid]] `parallel_support_channel_for` → 本节点
 
 ## 来源依据

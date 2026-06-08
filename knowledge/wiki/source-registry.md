@@ -14,9 +14,9 @@ status: draft
 | Source | source_type | tier | ingest |
 | --- | --- | --- | --- |
 | `中华人民共和国反家庭暴力法` | national_law | 1 | done |
-| `涉及家庭暴力婚姻案件审理指南` | judicial_interpretation | 1 | pending |
+| `涉及家庭暴力婚姻案件审理指南` | judicial_interpretation | 1 | done |
 | `人身安全保护令实务` | practice_guide | 3 | done |
-| `中国反家庭暴力法律法规与实务指南` | practice_guide | 3 | pending |
+| `中国反家庭暴力法律法规与司法解释` | judicial_interpretation | 1 | done |
 | `公安机关办理伤害案件规定` | agency_rule | 2 | done |
 | `妇联组织受理家庭暴力投诉工作规程` | agency_rule | 2 | pending |
 | `预防和制止家庭暴力警察工作手册` | official_manual | 3 | done |
@@ -30,7 +30,7 @@ status: draft
 | `吉林省反家庭暴力条例` | local_regulation | 2 | pending |
 | `山东省反家庭暴力条例` | local_regulation | 2 | pending |
 | `山西省家庭暴力预防和处置办法` | local_regulation | 2 | pending |
-| `河北省反家庭暴力條例(2022修訂)` | local_regulation | 2 | pending |
+| `河北省反家庭暴力条例(2022修订)` | local_regulation | 2 | pending |
 | `河南省反家庭暴力条例` | local_regulation | 2 | pending |
 | `湖北省反家庭暴力条例` | local_regulation | 2 | pending |
 | `甘肃省反家庭暴力条例` | local_regulation | 2 | pending |

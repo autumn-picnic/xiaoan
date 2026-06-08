@@ -15,6 +15,7 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | Source | Notes |
 | --- | --- |
 | [[中华人民共和国反家庭暴力法]] | User-maintained raw legal source. Do not edit. |
+| [[中国反家庭暴力法律法规与司法解释]] | 一手法规汇编：含法释〔2022〕17号、公通字〔2024〕34号等全文。Do not edit. |
 
 ## Legal Atom Nodes
 
@@ -23,6 +24,7 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[domestic-violence-definition]] | definition | Legal definition of domestic violence and groups requiring special protection. | 第2条、第5条、第37条 |
 | [[public-security-response-duty]] | duty | Public security duties after a domestic-violence report: dispatch, stop violence, investigate evidence, assist medical care/appraisal. | 第13-17条、第20条 |
 | [[personal-safety-protection-order]] | remedy | Protection order eligibility, applicants, jurisdiction, timing, measures, duration, execution, and consequences of violation. | 第23-34条 |
+| [[warning-letter]] | remedy | Police warning letter (告诫书): issuance conditions, evidence conditions, service, follow-up. | 第16-17条；公通字〔2024〕34号 |
 | [[protection-order-element-danger]] | element | Core constitutive element of the protection-order claim: suffered DV or facing real danger (第27条要件3). | 第27条、第2条、第23条 |
 | [[protection-order-evidence]] | evidence | Protection-order proof standard ("larger possibility") and evidence types; needs legal review (secondary source). | 人身安全保护令实务、第20条 |
 | [[injury-appraisal-procedure]] | procedure | Injury-appraisal commission/timelines and police case handling; mediation limits. | 公安机关办理伤害案件规定第11-39条 |

@@ -54,9 +54,12 @@ status: draft
 | `public-security-response-duty` | `enables` | `personal-safety-protection-order` | 法院作出保护令后，公安机关以及居民委员会、村民委员会等应当协助执行。 | 反家暴法第32条 | draft |
 | `support-and-legal-aid` | `parallel_support_channel_for` | `public-security-response-duty` | 单位、居委会/村委会、妇联等投诉求助渠道与公安报案路径并行，不能替代即时危险时的安全处理。 | 反家暴法第13条 | draft |
 | `support-and-legal-aid` | `parallel_support_channel_for` | `personal-safety-protection-order` | 法律援助和诉讼费用减免可支持受害人使用法院路径，但不等于保证个案结果。 | 反家暴法第19条、第23条 | draft |
-| `protection-order-evidence` | `proves` | `protection-order-element-danger` | 多类证据（陈述、告诫书、出警记录、医疗记录、证人证言、伤情鉴定等）用于证明“遭受家暴或面临现实危险”这一核心要件；证明标准为“较大可能性”。 | 人身安全保护令实务（转述法释〔2022〕17号第6条）；反家暴法第20条 | needs-review |
-| `public-security-response-duty` | `provides_evidence_for` | `protection-order-evidence` | 告诫书、出警记录、报警回执等公安记录是保护令证据的重要组成。 | 反家暴法第16-17条、第20条；人身安全保护令实务 | needs-review |
-| `support-and-legal-aid` | `provides_evidence_for` | `protection-order-evidence` | 妇联、居委会、救助机构收到投诉/求助的记录可作为保护令证据之一。 | 人身安全保护令实务（转述法释〔2022〕17号第6条） | needs-review |
+| `protection-order-evidence` | `proves` | `protection-order-element-danger` | 11类证据（陈述、告诫书、出警记录、视听资料、电子数据、医疗记录、求助记录、证人证言、伤情鉴定等）用于证明“遭受家暴或面临现实危险”要件；证明标准为“较大可能性”。 | 法释〔2022〕17号第六条（一手）；反家暴法第20条 | draft |
+| `public-security-response-duty` | `provides_evidence_for` | `protection-order-evidence` | 告诫书、出警记录、报警回执、询问/讯问笔录等公安记录是保护令证据的重要组成。 | 反家暴法第16-17条、第20条；法释〔2022〕17号第六条 | draft |
+| `support-and-legal-aid` | `provides_evidence_for` | `protection-order-evidence` | 单位、民政、居委会、村委会、妇联、救助机构等收到投诉/反映/求助的记录可作为证据之一。 | 法释〔2022〕17号第六条第(八)项 | draft |
+| `domestic-violence-definition` | `defines_scope_for` | `warning-letter` | 家暴事实的认定界定是否对加害人出具告诫书。 | 反家暴法第16条；公通字〔2024〕34号第三至六条 | draft |
+| `public-security-response-duty` | `enables` | `warning-letter` | 公安机关对情节较轻的家暴出具、送达告诫书并查访监督。 | 反家暴法第16-17条；公通字〔2024〕34号 | draft |
+| `warning-letter` | `provides_evidence_for` | `protection-order-evidence` | 家庭暴力告诫书是法释〔2022〕17号列举的保护令证据之一。 | 法释〔2022〕17号第六条第(二)项；反家暴法第20条 | draft |
 | `public-security-response-duty` | `enables` | `injury-appraisal-procedure` | 公安机关协助受害人就医、鉴定伤情，并按规定开具伤情鉴定委托书、规范现场处置。 | 反家暴法第15条；公安机关办理伤害案件规定第11-12条、第18-19条 | draft |
 | `injury-appraisal-procedure` | `provides_evidence_for` | `protection-order-evidence` | 伤情鉴定意见是保护令及后续认定家暴事实的重要证据来源。 | 公安机关办理伤害案件规定第18-19条；反家暴法第20条 | draft |
 | `police-dv-handling-workflow` | `enables` | `public-security-response-duty` | 警察五阶段工作流程把法定出警/处置职责落成可操作的现场流程。 | 预防和制止家庭暴力警察工作手册 | needs-review |
