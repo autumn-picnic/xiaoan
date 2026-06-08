@@ -49,3 +49,12 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Changed node pages' "详见 `edges`" (8) to plain `edges.md`.
 - Verified all 17 edges are mirrored as node-to-node `wikilinks` in node pages, so no graph edges were lost.
 - Added an Obsidian graph convention to `knowledge/AGENTS.md`: node-to-node wikilinks are the graph edge source of truth; catalogs use plain text; use Graph filter `path:nodes` for a pure node view.
+
+## [2026-06-07] schema-v0.2 | consolidate edge types 10 -> 6
+
+- Audited declared vs used edge relations. Used: provides_evidence_for(6), enables, localizes, defines_scope_for, parallel_support_channel_for, conflicts_with. Unused: triggers, requires, creates_consequence_for, plus stray `limits`.
+- Deleted `triggers` (folded into `defines_scope_for`), `requires` (inverse direction), `creates_consequence_for` + `limits` (unused; consequence stays inside node until a consequence node is split out).
+- Merged `assists_execution_of` -> `enables` (relabeled 1 edge + 2 node pages).
+- Final vocabulary = 6 relations; all 17 edges remap cleanly (provides_evidence_for 6, enables 3, localizes 3, defines_scope_for 2, parallel_support_channel_for 2, conflicts_with 1).
+- Updated `knowledge/AGENTS.md` (Edge relations table + label list) and `knowledge/wiki/edges.md` vocabulary.
+- Recommendation recorded: if only one edge type can be visualized, use `provides_evidence_for` (connects 6/8 nodes, converges on protection-order; evidence is the highest-leverage DV problem).

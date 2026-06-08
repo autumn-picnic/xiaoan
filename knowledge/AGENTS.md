@@ -86,18 +86,18 @@ This is the frozen working schema for the current phase (frozen 2026-06-07). Ref
 
 ### Edge relations
 
+Six relations (v0.2, consolidated 2026-06-07). Only keep relations needed for cross-node reuse, cross-source/level links, or mechanism chains.
+
 | Relation | Meaning |
 | --- | --- |
-| `defines_scope_for` | A definition node bounds the scope of another node |
-| `triggers` | A fact/condition triggers a duty, procedure, or remedy |
-| `requires` | A remedy/procedure requires a condition or input |
-| `enables` | A node makes another node practically available |
-| `provides_evidence_for` | A record/procedure result can support later fact-finding |
-| `assists_execution_of` | An actor/procedure assists executing a remedy/ruling |
-| `parallel_support_channel_for` | A support channel runs parallel to another path |
-| `creates_consequence_for` | An act triggers a legal consequence |
-| `localizes` | A local-rule node refines/implements a national node |
+| `defines_scope_for` | A definition/condition node bounds whether and how far another node applies (absorbs "fact/condition triggers a duty or remedy") |
+| `provides_evidence_for` | A record/procedure result can support later fact-finding (evidence chain; densest backbone) |
+| `enables` | A node makes another practically available or executable (absorbs "assists executing a remedy/ruling") |
+| `parallel_support_channel_for` | A support channel runs parallel to another path, as a supplement not a replacement |
+| `localizes` | A local-rule node refines/implements a national node (cross-level) |
 | `conflicts_with` | Two sourced claims appear to conflict (flag, do not silently resolve) |
+
+Deleted in v0.2: `triggers` (folded into `defines_scope_for`), `assists_execution_of` (folded into `enables`), `requires` (inverse direction, express via From->To), `creates_consequence_for` and `limits` (unused; keep consequence info inside the node until a consequence node is split out).
 
 When unsure which relation fits, prefer adding the edge with `status: needs-review` rather than forcing a label.
 
@@ -155,7 +155,7 @@ Legal mechanisms are not a separate layer of pages. A mechanism is an edge: a so
 - Keep relationship metadata in `edges.md`.
 - Express graph links using Obsidian links in node pages so the graph view remains useful.
 - Link the tree root to raw source filenames so Obsidian can visualize source-to-mechanism coverage without editing raw sources.
-- Prefer relationship labels such as `defines_scope_for`, `triggers`, `requires`, `enables`, `provides_evidence_for`, `assists_execution_of`, `limits`, `creates_consequence_for`, and `parallel_support_channel_for`.
+- Use one of the six relations: `defines_scope_for`, `provides_evidence_for`, `enables`, `parallel_support_channel_for`, `localizes`, `conflicts_with`. If none fits, add the edge with `status: needs-review` rather than inventing a label.
 
 ### Obsidian graph convention (important)
 

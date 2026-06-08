@@ -15,18 +15,23 @@ status: draft
 
 ## Edge type vocabulary
 
+精简后保留 6 种关系（v0.1 → v0.2，2026-06-07）。设计原则：只保留**跨 node 复用**、**跨来源/层级**、或**机制链条**才需要的关系；可被其他关系覆盖或零使用的一律删除。
+
 | Relation | Meaning |
 | --- | --- |
-| `defines_scope_for` | 一个定义节点限定另一个制度/义务/救济节点的适用范围 |
-| `triggers` | 一个事实或条件触发某项义务、程序或救济 |
-| `requires` | 一个救济/程序需要某个条件或前置输入 |
-| `enables` | 一个节点使另一个节点在实践中可用 |
-| `provides_evidence_for` | 一个记录、材料或程序结果可支持后续事实认定 |
-| `assists_execution_of` | 一个机构或程序协助另一个救济/裁定执行 |
-| `parallel_support_channel_for` | 一个支持渠道与另一路径并行存在，可作为补充 |
-| `creates_consequence_for` | 一个行为触发法律责任或后果 |
-| `localizes` | 地方规则细化/落实国家法节点 |
+| `defines_scope_for` | 定义/条件节点限定另一节点**是否适用、适用范围**（含“某事实/条件触发某义务或救济”的门槛） |
+| `provides_evidence_for` | 一个记录、材料或程序结果可支持后续事实认定（证据链，本图最密的主干） |
+| `enables` | 一个节点使另一个节点在实践中**可用或得以执行**（含机构/程序协助执行裁定、救济） |
+| `parallel_support_channel_for` | 一个支持渠道与另一路径并行存在，是补充而非替代 |
+| `localizes` | 地方规则细化/落实国家法节点（跨层级） |
 | `conflicts_with` | 两个来源的主张看似冲突（标记，不要静默处理） |
+
+已删除的关系及原因：
+
+- `triggers`：与 `defines_scope_for` 重叠（都是“前提决定下游是否适用”），并入后者。
+- `assists_execution_of`：只是 `enables` 的特例（协助执行也是使其得以运作），并入 `enables`。
+- `requires`：只是 `enables`/`provides_evidence_for` 的反向，方向用 From→To 表达即可，无需单列。
+- `creates_consequence_for`、`limits`：当前零使用；“违反后果/责任”暂留在相关 node 内部。等拆出独立的 consequence 节点、确有跨 node 复用时再重新引入。
 
 完整 schema v0.1（节点类型、边类型、source_type 信任分级、ingest 粒度、禁止项）见 `knowledge/AGENTS.md`。
 
@@ -37,7 +42,7 @@ status: draft
 | `domestic-violence-definition` | `defines_scope_for` | `public-security-response-duty` | “家庭暴力报案”触发公安机关及时出警、制止、调查取证、协助就医/鉴定伤情等职责。 | 反家暴法第2条、第13条、第15条 | draft |
 | `domestic-violence-definition` | `defines_scope_for` | `personal-safety-protection-order` | 遭受家庭暴力或面临家庭暴力现实危险，是申请人身安全保护令的核心事实基础。 | 反家暴法第2条、第23条、第27条 | draft |
 | `public-security-response-duty` | `provides_evidence_for` | `personal-safety-protection-order` | 公安机关出警记录、告诫书、伤情鉴定意见等可作为法院认定家庭暴力事实的证据来源；保护令相关事实判断可受这些证据支持，但法条第20条并不只限于保护令案件。 | 反家暴法第20条、第23条、第27条 | draft |
-| `public-security-response-duty` | `assists_execution_of` | `personal-safety-protection-order` | 法院作出保护令后，公安机关以及居民委员会、村民委员会等应当协助执行。 | 反家暴法第32条 | draft |
+| `public-security-response-duty` | `enables` | `personal-safety-protection-order` | 法院作出保护令后，公安机关以及居民委员会、村民委员会等应当协助执行。 | 反家暴法第32条 | draft |
 | `support-and-legal-aid` | `parallel_support_channel_for` | `public-security-response-duty` | 单位、居委会/村委会、妇联等投诉求助渠道与公安报案路径并行，不能替代即时危险时的安全处理。 | 反家暴法第13条 | draft |
 | `support-and-legal-aid` | `parallel_support_channel_for` | `personal-safety-protection-order` | 法律援助和诉讼费用减免可支持受害人使用法院路径，但不等于保证个案结果。 | 反家暴法第19条、第23条 | draft |
 | `protection-order-evidence` | `provides_evidence_for` | `personal-safety-protection-order` | 多类证据（陈述、告诫书、出警记录、医疗记录、证人证言、伤情鉴定等）可用于支持保护令申请；证明标准为“较大可能性”。 | 人身安全保护令实务（转述法释〔2022〕17号第6条）；反家暴法第20条 | needs-review |

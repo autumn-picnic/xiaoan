@@ -87,7 +87,7 @@ status: draft
 
 - [[domestic-violence-definition]] `defines_scope_for` 本节点。
 - [[public-security-response-duty]] `provides_evidence_for` -> 本节点。
-- [[public-security-response-duty]] `assists_execution_of` -> 本节点。
+- [[public-security-response-duty]] `enables` -> 本节点（协助执行保护令）。
 - [[protection-order-evidence]] `provides_evidence_for` -> 本节点。
 - [[support-and-legal-aid]] `parallel_support_channel_for` -> 本节点。
 
