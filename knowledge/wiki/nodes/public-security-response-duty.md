@@ -55,7 +55,6 @@ status: draft
 详见 `edges.md`：
 
 - [[domestic-violence-definition]] `defines_scope_for` 本节点。
-- 本节点 `provides_evidence_for` → [[personal-safety-protection-order]]
 - 本节点 `enables` → [[personal-safety-protection-order]]（协助执行保护令）
 - [[support-and-legal-aid]] `parallel_support_channel_for` → 本节点
 

@@ -44,7 +44,7 @@ status: needs-review
 详见 `edges.md`：
 
 - [[public-security-response-duty]] `provides_evidence_for` -> 本节点（告诫书、出警记录等）。
-- 本节点 `provides_evidence_for` -> [[personal-safety-protection-order]]
+- 本节点 `proves` -> [[protection-order-element-danger]]（证明保护令核心要件）。
 - [[support-and-legal-aid]] `provides_evidence_for` -> 本节点（妇联/求助记录可作为证据之一）。
 
 ## 来源依据

@@ -23,6 +23,7 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[domestic-violence-definition]] | definition | Legal definition of domestic violence and groups requiring special protection. | 第2条、第5条、第37条 |
 | [[public-security-response-duty]] | duty | Public security duties after a domestic-violence report: dispatch, stop violence, investigate evidence, assist medical care/appraisal. | 第13-17条、第20条 |
 | [[personal-safety-protection-order]] | remedy | Protection order eligibility, applicants, jurisdiction, timing, measures, duration, execution, and consequences of violation. | 第23-34条 |
+| [[protection-order-element-danger]] | element | Core constitutive element of the protection-order claim: suffered DV or facing real danger (第27条要件3). | 第27条、第2条、第23条 |
 | [[protection-order-evidence]] | evidence | Protection-order proof standard ("larger possibility") and evidence types; needs legal review (secondary source). | 人身安全保护令实务、第20条 |
 | [[injury-appraisal-procedure]] | procedure | Injury-appraisal commission/timelines and police case handling; mediation limits. | 公安机关办理伤害案件规定第11-39条 |
 | [[police-dv-handling-workflow]] | procedure | Five-stage police DV workflow and risk assessment; predates 2016 law, needs review. | 预防和制止家庭暴力警察工作手册 |
@@ -32,6 +33,12 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 ## Legal Mechanism Edges
 
 See [[edges]] for the current sourced relationship table.
+
+## Syntheses (legal analyses filed back into the wiki)
+
+| Page | Method | Summary | Status |
+| --- | --- | --- | --- |
+| [[protection-order-six-part-checklist]] | 请求权基础分析法（六段式审判框架） | Six-part element checklist for the personal-safety protection order: overview, filing review, applicant claims, respondent defenses, element facts, knowledge graph. | needs-review |
 
 ## Open Gaps
 

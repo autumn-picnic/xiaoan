@@ -15,37 +15,46 @@ status: draft
 
 ## Edge type vocabulary
 
-精简后保留 6 种关系（v0.1 → v0.2，2026-06-07）。设计原则：只保留**跨 node 复用**、**跨来源/层级**、或**机制链条**才需要的关系；可被其他关系覆盖或零使用的一律删除。
+8 种关系（v0.3，2026-06-07）。v0.2 把 10→6；v0.3 加回**要件层**的 `is_element_of` 与 `proves`——这是律师“请求权基础分析法”的核心,不是冗余。
 
 | Relation | Meaning |
 | --- | --- |
-| `defines_scope_for` | 定义/条件节点限定另一节点**是否适用、适用范围**（含“某事实/条件触发某义务或救济”的门槛） |
-| `provides_evidence_for` | 一个记录、材料或程序结果可支持后续事实认定（证据链，本图最密的主干） |
-| `enables` | 一个节点使另一个节点在实践中**可用或得以执行**（含机构/程序协助执行裁定、救济） |
-| `parallel_support_channel_for` | 一个支持渠道与另一路径并行存在，是补充而非替代 |
+| `defines_scope_for` | 定义/条件节点限定另一节点**是否适用、适用范围**（含门槛触发） |
+| `is_element_of` | 要件节点（element）是某请求权/救济的**构成要件**（请求权基础） |
+| `proves` | 证据节点**证明某个要件**（而不是泛泛支撑某救济） |
+| `provides_evidence_for` | 来源节点（机构/义务/程序/支持）产出的记录构成证据 |
+| `enables` | 一个节点使另一个节点在实践中**可用或得以执行**（含协助执行裁定） |
+| `parallel_support_channel_for` | 支持渠道与另一路径并行，是补充而非替代（求助导航，非法律doctrine） |
 | `localizes` | 地方规则细化/落实国家法节点（跨层级） |
 | `conflicts_with` | 两个来源的主张看似冲突（标记，不要静默处理） |
 
-已删除的关系及原因：
+### 律师的推理链（请求权基础分析）
 
-- `triggers`：与 `defines_scope_for` 重叠（都是“前提决定下游是否适用”），并入后者。
-- `assists_execution_of`：只是 `enables` 的特例（协助执行也是使其得以运作），并入 `enables`。
-- `requires`：只是 `enables`/`provides_evidence_for` 的反向，方向用 From→To 表达即可，无需单列。
-- `creates_consequence_for`、`limits`：当前零使用；“违反后果/责任”暂留在相关 node 内部。等拆出独立的 consequence 节点、确有跨 node 复用时再重新引入。
+证据**永远不直接连救济**，而是经由要件：
 
-完整 schema v0.1（节点类型、边类型、source_type 信任分级、ingest 粒度、禁止项）见 `knowledge/AGENTS.md`。
+```
+来源（机构/义务/程序/支持）
+   --provides_evidence_for-->  证据（evidence）
+   --proves-->                 要件（element）
+   --is_element_of-->          请求权/救济（remedy）
+定义（definition）--defines_scope_for--> 要件（element）   # 定义界定要件含义
+```
+
+已删除的关系（v0.2 起）：`triggers`（并入 `defines_scope_for`）、`assists_execution_of`（并入 `enables`）、`requires`（反向，用 From→To 表达）、`creates_consequence_for`/`limits`（零使用，违反后果暂留 node 内部）。
+
+完整 schema（节点类型、边类型、source_type 信任分级、ingest 粒度、禁止项）见 `knowledge/AGENTS.md`。
 
 ## Current edges
 
 | From | Relation | To | Claim | Source refs | Status |
 | --- | --- | --- | --- | --- | --- |
 | `domestic-violence-definition` | `defines_scope_for` | `public-security-response-duty` | “家庭暴力报案”触发公安机关及时出警、制止、调查取证、协助就医/鉴定伤情等职责。 | 反家暴法第2条、第13条、第15条 | draft |
-| `domestic-violence-definition` | `defines_scope_for` | `personal-safety-protection-order` | 遭受家庭暴力或面临家庭暴力现实危险，是申请人身安全保护令的核心事实基础。 | 反家暴法第2条、第23条、第27条 | draft |
-| `public-security-response-duty` | `provides_evidence_for` | `personal-safety-protection-order` | 公安机关出警记录、告诫书、伤情鉴定意见等可作为法院认定家庭暴力事实的证据来源；保护令相关事实判断可受这些证据支持，但法条第20条并不只限于保护令案件。 | 反家暴法第20条、第23条、第27条 | draft |
+| `protection-order-element-danger` | `is_element_of` | `personal-safety-protection-order` | “遭受家暴或面临现实危险”是保护令请求权的核心权利发生要件（第27条三要件之一）。 | 反家暴法第27条、第23条 | draft |
+| `domestic-violence-definition` | `defines_scope_for` | `protection-order-element-danger` | 家暴定义界定“遭受家暴”这一要件的含义（身体与精神侵害）。 | 反家暴法第2条、第27条 | draft |
 | `public-security-response-duty` | `enables` | `personal-safety-protection-order` | 法院作出保护令后，公安机关以及居民委员会、村民委员会等应当协助执行。 | 反家暴法第32条 | draft |
 | `support-and-legal-aid` | `parallel_support_channel_for` | `public-security-response-duty` | 单位、居委会/村委会、妇联等投诉求助渠道与公安报案路径并行，不能替代即时危险时的安全处理。 | 反家暴法第13条 | draft |
 | `support-and-legal-aid` | `parallel_support_channel_for` | `personal-safety-protection-order` | 法律援助和诉讼费用减免可支持受害人使用法院路径，但不等于保证个案结果。 | 反家暴法第19条、第23条 | draft |
-| `protection-order-evidence` | `provides_evidence_for` | `personal-safety-protection-order` | 多类证据（陈述、告诫书、出警记录、医疗记录、证人证言、伤情鉴定等）可用于支持保护令申请；证明标准为“较大可能性”。 | 人身安全保护令实务（转述法释〔2022〕17号第6条）；反家暴法第20条 | needs-review |
+| `protection-order-evidence` | `proves` | `protection-order-element-danger` | 多类证据（陈述、告诫书、出警记录、医疗记录、证人证言、伤情鉴定等）用于证明“遭受家暴或面临现实危险”这一核心要件；证明标准为“较大可能性”。 | 人身安全保护令实务（转述法释〔2022〕17号第6条）；反家暴法第20条 | needs-review |
 | `public-security-response-duty` | `provides_evidence_for` | `protection-order-evidence` | 告诫书、出警记录、报警回执等公安记录是保护令证据的重要组成。 | 反家暴法第16-17条、第20条；人身安全保护令实务 | needs-review |
 | `support-and-legal-aid` | `provides_evidence_for` | `protection-order-evidence` | 妇联、居委会、救助机构收到投诉/求助的记录可作为保护令证据之一。 | 人身安全保护令实务（转述法释〔2022〕17号第6条） | needs-review |
 | `public-security-response-duty` | `enables` | `injury-appraisal-procedure` | 公安机关协助受害人就医、鉴定伤情，并按规定开具伤情鉴定委托书、规范现场处置。 | 反家暴法第15条；公安机关办理伤害案件规定第11-12条、第18-19条 | draft |

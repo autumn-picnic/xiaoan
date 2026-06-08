@@ -58,3 +58,12 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Final vocabulary = 6 relations; all 17 edges remap cleanly (provides_evidence_for 6, enables 3, localizes 3, defines_scope_for 2, parallel_support_channel_for 2, conflicts_with 1).
 - Updated `knowledge/AGENTS.md` (Edge relations table + label list) and `knowledge/wiki/edges.md` vocabulary.
 - Recommendation recorded: if only one edge type can be visualized, use `provides_evidence_for` (connects 6/8 nodes, converges on protection-order; evidence is the highest-leverage DV problem).
+
+## [2026-06-07] schema-v0.3 + synthesis | element layer (请求权基础分析)
+
+- Studied the real 六段式要件清单 from CSlawyer1985/china-lawyer-analyst (请求权基础分析法: 总体情况概述/立案审查/原告诉请/被告抗辩/要件事实/知识图谱).
+- Added `element` node_kind and two requirement-layer relations `is_element_of` (element->claim) and `proves` (evidence->element) to knowledge/AGENTS.md (schema v0.3). Documented the lawyer chain: 来源 --provides_evidence_for--> 证据 --proves--> 要件 --is_element_of--> 请求权.
+- Created node `protection-order-element-danger` (要件3: 遭受家暴或面临现实危险, needs-review).
+- Created synthesis `syntheses/protection-order-six-part-checklist.md`: mimics the six-part framework applied to the protection order, fully source-grounded, with needs-review flags and a reviewer checklist.
+- Rewired the protection-order subgraph to route evidence through the element (no longer evidence->remedy directly): evidence proves element; element is_element_of remedy; definition defines_scope_for element. Removed the subsumed duty->remedy evidence shortcut. Edge count stays 17; nodes 8->9.
+- Caught a possible citation error to surface for review: practice guide cites "《反家暴法》第八条" for the "对方有过错不影响核发" defense, but 第八条 is about township prevention work — likely a misattributed 审理指南 clause. Flagged in the checklist's review list.

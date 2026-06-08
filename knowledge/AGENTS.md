@@ -79,6 +79,7 @@ This is the frozen working schema for the current phase (frozen 2026-06-07). Ref
 | `remedy` | A legal remedy or protective measure | 人身安全保护令、告诫书 |
 | `procedure` | A process/steps with conditions and timelines | 保护令申请流程 |
 | `condition` | A precondition/threshold for a remedy or duty | “面临家庭暴力现实危险” |
+| `element` | A constitutive requirement (要件) of a claim/remedy under 请求权基础分析 | 保护令第27条三要件之一 |
 | `evidence` | An evidence type or record | 出警记录、伤情鉴定意见 |
 | `consequence` | A legal liability/consequence | 违反保护令的法律责任 |
 | `support` | A support/aid channel | 法律援助、临时庇护、投诉渠道 |
@@ -86,18 +87,34 @@ This is the frozen working schema for the current phase (frozen 2026-06-07). Ref
 
 ### Edge relations
 
-Six relations (v0.2, consolidated 2026-06-07). Only keep relations needed for cross-node reuse, cross-source/level links, or mechanism chains.
+Eight relations (v0.3, 2026-06-07). v0.2 consolidated 10->6; v0.3 adds the two **requirement-layer** relations (`is_element_of`, `proves`) that encode how lawyers actually reason (请求权基础分析法 / claim-basis analysis). These are the doctrinal core, not bloat.
 
 | Relation | Meaning |
 | --- | --- |
 | `defines_scope_for` | A definition/condition node bounds whether and how far another node applies (absorbs "fact/condition triggers a duty or remedy") |
-| `provides_evidence_for` | A record/procedure result can support later fact-finding (evidence chain; densest backbone) |
+| `is_element_of` | An element node (要件) is a constitutive requirement of a claim/remedy (请求权基础) |
+| `proves` | An evidence node proves/supports a specific element (要件), not a remedy in general |
+| `provides_evidence_for` | A source node (actor/duty/procedure/support) generates a record that counts as evidence |
 | `enables` | A node makes another practically available or executable (absorbs "assists executing a remedy/ruling") |
-| `parallel_support_channel_for` | A support channel runs parallel to another path, as a supplement not a replacement |
+| `parallel_support_channel_for` | A support channel runs parallel to another path, as a supplement not a replacement (navigation, not doctrine) |
 | `localizes` | A local-rule node refines/implements a national node (cross-level) |
 | `conflicts_with` | Two sourced claims appear to conflict (flag, do not silently resolve) |
 
-Deleted in v0.2: `triggers` (folded into `defines_scope_for`), `assists_execution_of` (folded into `enables`), `requires` (inverse direction, express via From->To), `creates_consequence_for` and `limits` (unused; keep consequence info inside the node until a consequence node is split out).
+### The lawyer's reasoning chain (请求权基础分析)
+
+Model evidence the way a lawyer does — never evidence straight to remedy. Always route through the element:
+
+```
+来源 (actor/duty/procedure/support)
+   --provides_evidence_for-->  证据 (evidence)
+   --proves-->                 要件 (element)
+   --is_element_of-->          请求权/救济 (remedy)
+定义 (definition) --defines_scope_for--> 要件 (element)   # 定义界定要件的含义
+```
+
+`parallel_support_channel_for` is a help-seeking navigation relation, not a legal doctrine; keep it but do not treat it as part of the claim-basis chain.
+
+Deleted in v0.2 (still excluded): `triggers` (folded into `defines_scope_for`), `assists_execution_of` (folded into `enables`), `requires` (inverse direction, express via From->To), `creates_consequence_for` and `limits` (unused; keep consequence info inside the node until a consequence node is split out).
 
 When unsure which relation fits, prefer adding the edge with `status: needs-review` rather than forcing a label.
 

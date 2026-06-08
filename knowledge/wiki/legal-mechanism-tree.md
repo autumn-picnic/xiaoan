@@ -26,18 +26,23 @@ status: draft
 - [[domestic-violence-definition]]：家庭暴力定义、特殊保护对象、共同生活者参照适用。
 - [[public-security-response-duty]]：报案渠道、公安处置、告诫书、记录和证据价值。
 - [[personal-safety-protection-order]]：保护令申请条件、申请人、管辖、时限、措施、执行和违反后果。
+- [[protection-order-element-danger]]：保护令核心要件——遭受家暴或面临现实危险（第27条要件3）。
 - [[protection-order-evidence]]：保护令证明标准与证据类型（需法律核对）。
 - [[injury-appraisal-procedure]]：伤情鉴定与公安受案处置、调解边界。
 - [[police-dv-handling-workflow]]：警察处理家暴五阶段工作流程（实务，需核对）。
 - [[guangdong-implementation]]：广东省实施办法的地方细化（仅适用广东）。
 - [[support-and-legal-aid]]：投诉求助渠道、临时庇护、法律援助、诉讼费用减免、监护撤销和组织支持。
 
+## 综合分析（filed back）
+
+- 六段式要件清单：`syntheses/protection-order-six-part-checklist.md`（请求权基础分析法应用于保护令，needs-review）。
+
 ## 当前机制边
 
 详见 [[edges]]。当前已表达的机制包括：
 
-- 家暴定义如何限定公安响应、保护令等机制的适用范围。
-- 公安出警记录、告诫书、伤情鉴定意见如何为后续认定家暴事实提供证据支持。
+- 家暴定义如何限定公安响应，并界定保护令“遭受家暴”要件的含义。
+- 律师推理链：证据来源 → 证据 → 要件（遭受家暴/现实危险）→ 保护令请求权。
 - 人身安全保护令作出后，公安机关、居委会、村委会如何协助执行。
 - 投诉求助、临时庇护、法律援助与报警/法院路径如何构成并行支持渠道。
 

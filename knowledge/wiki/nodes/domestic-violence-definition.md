@@ -35,7 +35,7 @@ status: draft
 详见 `edges.md`：
 
 - `defines_scope_for` → [[public-security-response-duty]]
-- `defines_scope_for` → [[personal-safety-protection-order]]
+- `defines_scope_for` → [[protection-order-element-danger]]（界定“遭受家暴”要件的含义）
 
 ## 来源依据
 
