@@ -67,3 +67,15 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Created synthesis `syntheses/protection-order-six-part-checklist.md`: mimics the six-part framework applied to the protection order, fully source-grounded, with needs-review flags and a reviewer checklist.
 - Rewired the protection-order subgraph to route evidence through the element (no longer evidence->remedy directly): evidence proves element; element is_element_of remedy; definition defines_scope_for element. Removed the subsumed duty->remedy evidence shortcut. Edge count stays 17; nodes 8->9.
 - Caught a possible citation error to surface for review: practice guide cites "《反家暴法》第八条" for the "对方有过错不影响核发" defense, but 第八条 is about township prevention work — likely a misattributed 审理指南 clause. Flagged in the checklist's review list.
+
+## [2026-06-08] full-ingest | all 32 sources (waves 1-3)
+
+- Rebased onto latest origin/main (source renames: 中国…司法解释, 河北简体). Updated source-registry accordingly.
+- Wave 1 (judicial, tier 1): ingested 中国反家庭暴力法律法规与司法解释 (contains 法释〔2022〕17号 + 公通字〔2024〕34号 primary text) and 涉及家庭暴力婚姻案件审理指南.
+  - Resolved prior needs-review flags: "较大可能性" standard (法释17号第六条), 11类证据 (第六条), 远离/电话骚扰令 (第十条), 代为申请 (第二条).
+  - Resolved the "第八条" citation question: practice guide's "第八条" = 法释〔2022〕17号第八条 (认可家暴但辩称对方有过错不影响作出), not a misattribution; 审理指南第八条 separately states DV is not victim's fault.
+  - Added node `warning-letter` (告诫书) from 公通字〔2024〕34号.
+- Wave 2 (agency/manual/medical): added node `dv-risk-assessment` (妇联危险预测量表 + police manual, cross-source); enriched `support-and-legal-aid` (妇联 intake procedure) and `injury-appraisal-procedure` (medical evidence collection). Channel directories + NGO case reports registered done without legal nodes (schema: not used to invent duties).
+- Wave 3 (18 provincial regulations): created synthesis `local-regulations-comparison` (delta matrix: 网络/经济/冻饿/目睹未成年人/告诫强制/远离令/强制报告/代为申请/热线/信息共享) instead of 18 near-duplicate nodes; kept guangdong-implementation as worked example. All marked done.
+- Graph now: 12 nodes, evidence routed through the element layer (请求权基础分析). 2 syntheses filed back.
+- Remaining needs-review: police-dv-handling-workflow (pre-2016), local-regulations-comparison (per-province 条号 verification), 法律援助法第32条 primary text not in source.

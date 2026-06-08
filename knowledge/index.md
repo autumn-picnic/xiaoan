@@ -41,11 +41,13 @@ See [[edges]] for the current sourced relationship table.
 
 | Page | Method | Summary | Status |
 | --- | --- | --- | --- |
-| [[protection-order-six-part-checklist]] | 请求权基础分析法（六段式审判框架） | Six-part element checklist for the personal-safety protection order: overview, filing review, applicant claims, respondent defenses, element facts, knowledge graph. | needs-review |
+| [[protection-order-six-part-checklist]] | 请求权基础分析法（六段式审判框架） | Six-part element checklist for the personal-safety protection order: overview, filing review, applicant claims, respondent defenses, element facts, knowledge graph. | draft |
+| [[local-regulations-comparison]] | 上位法—下位法对照（localizes） | Cross-province comparison of 18 local DV regulations: definition/economic/online/witnessing-children deltas, mandatory warning letters, mandatory reporting, stay-away orders. | needs-review |
 
 ## Open Gaps
 
-- Ingest backlog: many files in `knowledge/source/` are not represented in the node/edge graph yet.
-- Need sources for detailed police procedures beyond the Anti-Domestic-Violence Law, especially public security manuals and injury-case handling rules.
-- Need local implementation rules to expand the graph beyond national law.
+- All 32 sources in `knowledge/source/` are ingested (see [[source-registry]]). Pilot + full ingest complete.
+- `《法律援助法》` 第32条 原文仍未入库（法律援助不受经济困难限制的依据待补一手来源）。
+- 18 省条例已做横向对比 [[local-regulations-comparison]]（needs-review，待逐省条号复核）。
+- 旧《审理指南》（2008，“保护裁定”）多被现行法取代，是否单独建 superseded 节点待定。
 - Scenario capsules are intentionally out of scope for the current phase.
