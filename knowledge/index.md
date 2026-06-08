@@ -25,6 +25,12 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[public-security-response-duty]] | duty | Public security duties after a domestic-violence report: dispatch, stop violence, investigate evidence, assist medical care/appraisal. | 第13-17条、第20条 |
 | [[personal-safety-protection-order]] | remedy | Protection order eligibility, applicants, jurisdiction, timing, measures, duration, execution, and consequences of violation. | 第23-34条 |
 | [[warning-letter]] | remedy | Police warning letter (告诫书): issuance conditions, evidence conditions, service, follow-up. | 第16-17条；公通字〔2024〕34号 |
+| [[guardianship-revocation]] | remedy | Revocation of guardianship for severe DV against a ward; support duties survive. | 第21条 |
+| [[special-protection-groups]] | definition | Minors, elderly, disabled, pregnant/nursing women, seriously ill — special protection. | 第5条 |
+| [[child-witness-victim]] | definition | Minors who witness DV treated as victims (local regulations; not in national law). | 重庆/甘肃/黑龙江条例 |
+| [[mandatory-reporting]] | duty | Mandatory reporting by institutions for DV against persons lacking/with limited capacity. | 第14、35条；地方 |
+| [[temporary-shelter]] | support | Temporary shelter setup, police-assisted placement, warning-letter as entry voucher. | 第15、18条；告诫意见 |
+| [[divorce-and-dv]] | procedure | DV in divorce litigation: ground for divorce, "new circumstances" re-filing, separation violence. | 法释17号第11条；审理指南 |
 | [[protection-order-element-danger]] | element | Core constitutive element of the protection-order claim: suffered DV or facing real danger (第27条要件3). | 第27条、第2条、第23条 |
 | [[protection-order-evidence]] | evidence | Protection-order proof standard ("larger possibility") and evidence types; needs legal review (secondary source). | 人身安全保护令实务、第20条 |
 | [[injury-appraisal-procedure]] | procedure | Injury-appraisal commission/timelines and police case handling; mediation limits. | 公安机关办理伤害案件规定第11-39条 |

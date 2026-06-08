@@ -86,3 +86,16 @@ Append-only chronological record of ingests, durable query pages, lint passes, a
 - Found the primary text was ALREADY in the corpus: `中国反家庭暴力法律法规与司法解释.md` §13 (法律援助法) line 325, 第三十二条 — the large compilation's section 13, missed in wave-1 first pass.
 - Resolved: added primary source_ref to `support-and-legal-aid` node; corrected scope ("主张相关权益" is broader than the secondary doc's "申请保护令"); checked off the synthesis review item; updated index gaps.
 - Lint lesson recorded: large multi-law compilations need per-section verification; first-pass ingest can miss later sections. Flagged in index Open Gaps.
+
+## [2026-06-08] expand | broaden coverage 11 -> 17 nodes
+
+- User chose breadth over depth. Extracted 6 new nodes from existing sources (no new ingest needed):
+  - `mandatory-reporting` (duty, 第14/35条 + 山西/重庆): institutional reporting + non-report sanctions.
+  - `guardianship-revocation` (remedy, 第21条): revoke guardianship; support duties survive.
+  - `temporary-shelter` (support, 第15/18条 + 告诫意见): setup, police-assisted placement, warning-letter voucher.
+  - `child-witness-victim` (definition, local regs, needs-review): minors witnessing DV as victims — local extension, not in national law.
+  - `special-protection-groups` (definition, 第5条): hub node for minors/elderly/disabled/pregnant/ill.
+  - `divorce-and-dv` (procedure, 法释17号第11条 + 审理指南, needs-review): DV as divorce ground, "new circumstances" re-filing, separation violence.
+- Added 15 edges; back-links added to existing node pages so Obsidian graph renders them.
+- Graph: 17 nodes, 36 edges. defines_scope_for 9, enables 9, provides_evidence_for 6, localizes 6, parallel 3, is_element_of/proves/conflicts_with 1 each.
+- Deferred: admonishment-vs-punishment (治安/刑事 vs 告诫) kept inline rather than split, to avoid over-fragmentation.

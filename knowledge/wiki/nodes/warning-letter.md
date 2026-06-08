@@ -51,6 +51,7 @@ status: draft
 - [[domestic-violence-definition]] `defines_scope_for` -> 本节点（家暴认定界定是否出具）。
 - [[public-security-response-duty]] `enables` -> 本节点（公安出具与送达）。
 - 本节点 `provides_evidence_for` -> [[protection-order-evidence]]（告诫书是11类证据之一）。
+- 本节点 `enables` -> [[temporary-shelter]]（告诫书可作申请庇护的凭证）。
 
 ## 来源依据
 

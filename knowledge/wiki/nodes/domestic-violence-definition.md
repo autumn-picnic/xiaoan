@@ -36,6 +36,10 @@ status: draft
 
 - `defines_scope_for` → [[public-security-response-duty]]
 - `defines_scope_for` → [[protection-order-element-danger]]（界定“遭受家暴”要件的含义）
+- `defines_scope_for` → [[mandatory-reporting]]（家暴/疑似家暴认定触发强制报告）
+- `defines_scope_for` → [[guardianship-revocation]]（严重侵害被监护人界定撤销监护）
+- `defines_scope_for` → [[child-witness-victim]]（地方层面扩展受害人范围）
+- `defines_scope_for` → [[divorce-and-dv]]（界定离婚理由与损害赔偿依据）
 
 ## 来源依据
 
