@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5c9e20c3aba23e0b",
+        "id": "66c12ecff113d58e",
         "type": "tabs",
         "children": [
           {
-            "id": "325668351ad0a5be",
+            "id": "58544d207ddbbcfe",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "2026-06-07.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-07"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "53f767e3124d58e3",
@@ -90,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2026-06-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 2026-06-07"
             }
           },
           {
@@ -108,11 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2026-06-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 2026-06-07"
             }
           },
           {
@@ -150,12 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "2026-06-07.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2026-06-07"
             }
           }
         ]
@@ -176,8 +184,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "325668351ad0a5be",
+  "active": "58544d207ddbbcfe",
   "lastOpenFiles": [
+    "Untitled 1.canvas",
+    "2026-06-07.md",
+    "Untitled.canvas",
     "dv-risk-assessment.md",
     "warning-letter.md",
     "protection-order-element-danger.md",
