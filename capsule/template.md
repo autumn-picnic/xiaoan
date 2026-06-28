@@ -36,7 +36,7 @@ author:
 - list
 - list
 
-## scripts:(optional)
+## scripts(optional)
 <!-- 提供1到2句话术模板 列表形式，用引号包裹的句子-->
 - list
 - list
