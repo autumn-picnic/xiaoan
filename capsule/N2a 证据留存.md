@@ -65,7 +65,7 @@ author: pp
 # ground
 
 ## legal_basis
-<!-- nodeid 列表 -->
+
 - domestic-violence-definition
 - dv-risk-assessment
 - personal-safety-protection-order
@@ -77,14 +77,14 @@ author: pp
 - public-security-response-duty
 
 ## practice_basis
-<!-- 列出 发布方-发布时间-实务指南/指导手冊名称-如果可以具体到章节-->
-- 全国妇联公安部-未注明时间-《预防和制止家庭暴力警察工作手册》第三章第二节(四)-收集固定证据
+
+- 全国妇联公安部-未注明时间-《预防和制止家庭暴力警察工作手册》-第三章第二节第(四)点收集固定证据
 - 最高人民法院-2025年-反家暴典型案例-强调多证据相互印证的重要性
 - 源众家庭与社区发展服务中心-未注明时间-《家庭暴力防护与应对实用手册》-关于证据收集的实操指南
 - 北京市东城区源众妇女儿童权益保护信息平台-未注明时间-求助指南-取证方法与安全策略
 
 # related_capsules
-<!-- 列表形式，使用胶囊的capsule name-->
+
 - K1 家暴常见误区
 - K2 暴力循环与出警期
 - K3 权益认知
