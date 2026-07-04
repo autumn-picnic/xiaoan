@@ -1,5 +1,5 @@
 ---
-capsule_name: 报警指引
+capsule_name: N3a 报警指引
 status: draft
 author: wave
 ---
