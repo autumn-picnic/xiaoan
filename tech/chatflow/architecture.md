@@ -43,7 +43,6 @@ User Input
                    v
             Final Response
 ```
-<!--所以是每次对话都要走一遍上述的流程-->
 
 ## 1.信息脱敏
 
@@ -140,7 +139,7 @@ Red flag 包括
 
 有，而且必须有。不然用户第二轮说“那我具体怎么说？”系统会不知道“那”指什么。
 
-### P0 最小状态可以这样存：
+P0 最小状态可以这样存：
 ```
 conversation_state:
   active_capsule_id: police_pushback_family_matter
@@ -152,12 +151,10 @@ conversation_state:
   last_user_intent: ask_what_to_do
   ttl_turns: 3
 ```
-<!--这里可能是需要引用 capsule 的，需要让程序能定位到 capsule 的具体位置-->
-
-### 每轮处理逻辑
+每轮处理逻辑
 
 1. 先做 Safety Scan
-   高危永远覆盖 active capsule。<!--什么意思？-->
+   高危永远覆盖 active capsule。
 
 2. 如果用户明显是在追问上一轮：
    继续使用 active capsule。
@@ -177,7 +174,7 @@ conversation_state:
 用户说“凭什么他们要管？”
 用户说“如果他们还是不处理呢？”
 ```
-这些都应该继续用上一轮胶囊。<!--这种条件设置是不是有局限？有没有更好的判断依据？-->
+这些都应该继续用上一轮胶囊。
 
 什么时候切换？
 
@@ -187,4 +184,4 @@ conversation_state:
 用户从“报警记录”转到“孩子抚养权”
 用户突然说“他现在在门外”
 ```
-最后一个不是切换胶囊，而是直接被 Safety Scan 覆盖。<!--这个如何实现？-->
+最后一个不是切换胶囊，而是直接被 Safety Scan 覆盖。
