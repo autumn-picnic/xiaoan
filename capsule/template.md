@@ -32,24 +32,24 @@ author:
 - list
 
 # act
-<!-- steps use ordered list/choices use unordered list-->
+<!-- 可以使用有序列表表示有步骤先后的行动；如果有不同选项，可以使用二级标题-->
 - list
 - list
 
-## scripts(optional)
-<!-- 提供1到2句话术模板 列表形式，用引号包裹的句子-->
+## scripts
+<!-- 提供1到2句话术模板 列表形式，用引号包裹的句子（optional）-->
 - list
 - list
 
 # ground
 
-## legal_basis (put node id here)
-
+## legal_basis
+<!--使用 node id（也就是node文件名）-->
 - list
 - list
 
 ## practice_basis
-<!-- 列出 发布方-发布时间-实务指南/指导手冊名称-如果可以具体到章节-->
+<!-- 列出 作者-时间-标题-章节（optional）-->
 - list
 - list
 
