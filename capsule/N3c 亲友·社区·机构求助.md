@@ -1,5 +1,5 @@
 ---
-capsule_name: 亲友/社区/机构求助
+capsule_name: N3c 亲友·社区·机构求助
 status: draft
 author: 火
 ---
