@@ -1,6 +1,6 @@
 ---
 
-capsule_name: 创伤修复
+capsule_name: N7a 创伤修复
 status: draft
 author: 火
 
