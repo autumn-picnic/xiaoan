@@ -41,6 +41,16 @@ status: draft
 - [[divorce-and-dv]]：离婚诉讼与家庭暴力（家暴离婚理由、再诉新情况、分手暴力）。
 - [[liability-ladder]]：家暴法律责任阶梯——批评教育/告诫/治安处罚/刑事责任。
 
+## 学术纵深节点（Tier 5，无法律强制力）
+
+- [[psychological-violence-concept]]、[[economic-control-concept]]、[[dv-scope-extension]]：F1 定义纵深。
+- [[dv-law-legislative-history]]、[[coercive-control-comparative]]、[[international-human-rights-standards]]：F2 立法史、比较法与国际标准。
+- [[judicial-recognition-gap]]、[[victim-agency-barriers]]：F3 司法现实与求助障碍。
+- [[state-intervention-limits]]、[[constitutional-protection-obligation]]：F4 国家干预与基本权利保护义务法理。
+- [[gender-power-analysis]]：F5 性别权力与资源结构，仅作 AI 隐性认知底色，不进入胶囊 ground。
+
+以上节点只提供学术解释，不建立法律权利或义务；使用规则见 [[academic-layer]]。
+
 ## 综合分析（filed back）
 
 - 六段式要件清单：`syntheses/protection-order-six-part-checklist.md`（请求权基础分析法应用于保护令，needs-review）。

@@ -57,3 +57,22 @@ See [[edges]] for the current sourced relationship table.
 - 旧《审理指南》（2008，“保护裁定”）多被现行法取代，是否单独建 superseded 节点待定。
 - Lint 教训：大型法规汇编（如 `中国反家庭暴力法律法规与司法解释.md`，含 14+ 节）首轮 ingest 易只覆盖前部；需逐节核查。`法律援助法第32条` 即属此情形（原已在第13节，曾误判为缺失）。
 - Scenario capsules are intentionally out of scope for the current phase.
+- **学术论文层（wave 5）**：81篇唯一论文已上传 NotebookLM（`b14e6843`；本地82个PDF含1组重复版本）。11个 concept-depth 节点已全部创建；规范见 [[academic-layer]]。
+
+## 學術論文層節點（Tier 5，无法律强制力）
+
+节点清单（参见 `knowledge/wiki/academic-layer.md` 中的抽取规则和 NotebookLM 查询模板）：
+
+| 节点 | 功能 | 核心问题 |
+| --- | --- | --- |
+| [[psychological-violence-concept]] | F1 定义纵深 | 精神暴力的边界、冷暴力争议、认定困境（已创建，needs-review） |
+| [[economic-control-concept]] | F1 定义纵深 | 经济控制定义、立法空白、学界分歧（已创建，needs-review） |
+| [[dv-scope-extension]] | F1 定义纵深 | 准家庭成员、前任伴侣的认定边界（已创建，needs-review） |
+| [[dv-law-legislative-history]] | F2 立法溯源 | 反家暴法为何如此立法、立法博弈（已创建，needs-review） |
+| [[coercive-control-comparative]] | F2 比较法纵深 | 强制性控制行为模式、英国制度与保护令工具比较（已创建，needs-review） |
+| [[international-human-rights-standards]] | F2 国际标准纵深 | CEDAW、CRC、国际政策文件与中国现行法边界（已创建，needs-review） |
+| [[judicial-recognition-gap]] | F3 司法现实 | 样本口径、证据审查与法官组织行为（已创建，needs-review） |
+| [[victim-agency-barriers]] | F3 司法现实 | 求助与离开的结构性障碍、受害者能动性（已创建，needs-review） |
+| [[state-intervention-limits]] | F4 法哲学 | 公私领域、家庭自治与国家干预边界（已创建，needs-review） |
+| [[constitutional-protection-obligation]] | F4 法哲学 | 基本权利保护义务、国家积极义务与保护不足审查（已创建，needs-review） |
+| [[gender-power-analysis]] | F5 倡导框架 | 性别权力与资源结构分析（已创建，AI 隐性底色，needs-review） |

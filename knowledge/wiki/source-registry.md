@@ -72,3 +72,14 @@ status: draft
 
 - 18 个省级条例/实施办法均与国家《反家庭暴力法》构成 `localizes` 关系。为避免 18 个近似节点污染图谱，统一在 [[local-regulations-comparison]] 做横向细化对比；18 省一视同仁，不单设某一省的独立节点。
 - 该对比页标 needs-review：矩阵基于关键词与定义条款抽取，具体条号待逐省复核。
+
+## Ingest 说明（wave 5 — 学术论文层）
+
+- 81篇学术论文（`academic_paper`, tier 5）已批量上传到 NotebookLM（notebook `b14e6843`），**未逐篇在本表登记**。
+- 论文清单见 `knowledge/source/論文_pdf/` 目录。
+- 论文层的节点设计规范、抽取规则和 NotebookLM 查询模板见 `knowledge/wiki/academic-layer.md`。
+- 每次新增论文后，在本表追加一行；入库后在备注栏填写贡献到的节点。
+
+| Source | source_type | tier | ingest | 贡献节点 |
+| --- | --- | --- | --- | --- |
+| `論文_pdf/` 目录（81篇唯一论文；本地82个PDF含1组重复版本，详见目录） | academic_paper | 5 | done | 11个 concept-depth 节点已全部创建；论文仅作Tier 5学术解释，不作为法律义务依据 |

@@ -3,7 +3,7 @@ type: legal-edge-catalog
 title: "法律机制边目录"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md"
-updated: 2026-06-07
+updated: 2026-07-12
 status: draft
 ---
 
@@ -15,7 +15,7 @@ status: draft
 
 ## Edge type vocabulary
 
-9 种关系（v0.4，2026-06-08）。v0.2 把 10→6；v0.3 加回**要件层** `is_element_of`/`proves`；v0.4 因出现真实 consequence 节点（[[liability-ladder]]）加回 `creates_consequence_for`。
+12 种关系（v0.5，2026-07-11）。v0.2 把 10→6；v0.3 加回**要件层** `is_element_of`/`proves`；v0.4 因出现真实 consequence 节点（[[liability-ladder]]）加回 `creates_consequence_for`；v0.5 正式加入**学术层**三个边类型（`deepens`、`traces_legislative_origin_of`、`contextualizes_reality_of`）。
 
 | Relation | Meaning |
 | --- | --- |
@@ -28,6 +28,9 @@ status: draft
 | `parallel_support_channel_for` | 支持渠道与另一路径并行，是补充而非替代（求助导航，非法律doctrine） |
 | `localizes` | 地方规则细化/落实国家法节点（跨层级） |
 | `conflicts_with` | 两个来源的主张看似冲突（标记，不要静默处理） |
+| `deepens` | `concept-depth`（Tier 5）节点为 Tier 1–4 节点补充语义深度。非约束性；AI 引用须标注学术框架。 |
+| `traces_legislative_origin_of` | `concept-depth` 节点说明某 Tier 1–4 概念的域外立法来源或立法历史。 |
+| `contextualizes_reality_of` | `concept-depth`（F3 司法现实）节点解释某法律机制在实践中为何失灵或低效。 |
 
 ### 律师的推理链（请求权基础分析）
 
@@ -88,6 +91,22 @@ status: draft
 | `domestic-violence-definition` | `defines_scope_for` | `liability-ladder` | 家暴认定是适用批评教育/告诫/治安/刑事各层责任的前提。 | 反家暴法第16、33条 | draft |
 | `warning-letter` | `defines_scope_for` | `liability-ladder` | 告诫对应“情节较轻、不予治安处罚”一层，与治安/刑事处罚层互斥。 | 反家暴法第16条；公通字〔2024〕34号第一条 | draft |
 | `personal-safety-protection-order` | `creates_consequence_for` | `liability-ladder` | 违反保护令触发训诫、1000元以下罚款、15日以下拘留或刑事责任。 | 反家暴法第34条 | draft |
+| `psychological-violence-concept` | `deepens` | `domestic-violence-definition` | 学术研究补充精神暴力的控制目的、人格利益侵害、行为类型及冷暴力边界争议；非约束性，不能替代法律认定。 | 蒋月（2016）第7-8页；郝佳（2016）第59-64页；但淑华（2025）第138-141页 | needs-review |
+| `economic-control-concept` | `deepens` | `domestic-violence-definition` | 学术研究补充经济控制的经济自主侵害、依附后果、四类行为及独立说/涵盖说分歧；非约束性，不能替代法律认定。 | 王理万（2025）第67-81页；但淑华（2025）第138-143页；王丹（2022）第14-15页；郝佳（2016）第58-64页 | needs-review |
+| `dv-scope-extension` | `deepens` | `domestic-violence-definition` | 学术研究补充「家庭成员以外共同生活的人」的关系类型、共同生活判断及前任伴侣边界；非约束性，保护令资格不等同于全面纳入家暴定义。 | 但淑华（2025）第133-143页；薛宁兰（2017）第1-7页；王丹（2022）第11-21页 | needs-review |
+| `dv-law-legislative-history` | `traces_legislative_origin_of` | `domestic-violence-definition` | 学术资料解释主体范围与精神暴力的草案演变、性暴力和经济控制未独立列举的取舍；立法动机区分同期陈述、学者解释与事后批评。 | 高莎薇等（2016）第18-20页；但淑华（2025）第134-135、140页；郝佳（2016）第58页 | needs-review |
+| `coercive-control-comparative` | `deepens` | `domestic-violence-definition` | 比较研究以持续、反复的控制行为模式补充按侵害客体划分的家暴类型，并记录两种分类维度的争议；现有证据不足以建立直接立法来源关系。 | 但淑华（2025）第133、140-141页；胡邦彦（2026）第180页；王世洲（2016）第92-101页 | needs-review |
+| `international-human-rights-standards` | `deepens` | `domestic-violence-definition` | 学术研究以 CEDAW、CRC、国际政策文件和区域性比较标准补充家暴范围与国家保护视角；条约、解释材料、结论性意见和软法效力必须区分。 | 黄列（2002）PDF第2-7页；但淑华（2025）第132-134页；陈爱武（2016）第128-130页；于晶第108-109页；胡邦彦（2026）第179-180页 | needs-review |
+| `judicial-recognition-gap` | `contextualizes_reality_of` | `protection-order-evidence` | 实证研究解释家暴证据形成、评价、公安定性依赖及证明标准被主观抬高的问题；统计口径不可外推。 | 张剑源（2018）第103-111页；张海/陈爱武（2021）第185-200页 | needs-review |
+| `judicial-recognition-gap` | `contextualizes_reality_of` | `divorce-and-dv` | 实证研究解释调解、是否判离、抚养财产平衡、二审和安全压力如何影响家暴事实书写与认定。 | 贺欣/肖惠娜（2019）第5-20页；张剑源（2018）第103-111页 | needs-review |
+| `judicial-recognition-gap` | `contextualizes_reality_of` | `personal-safety-protection-order` | 对驳回裁定和历史统计的研究揭示证明责任、主体范围、保证书与法官顾虑等实践障碍；不等于全国驳回原因分布。 | 张海/陈爱武（2021）第185-200页；王丹（2022）第11-21页 | needs-review |
+| `victim-agency-barriers` | `deepens` | `domestic-violence-definition` | 结构性研究补充经济、住房、照护、安全、社会支持与制度回应如何压缩受害者选择空间；继续关系不等于同意暴力。 | 吴炜/何进平（2016）第88-91页；佟新（2000）第102-111页 | needs-review |
+| `victim-agency-barriers` | `contextualizes_reality_of` | `protection-order-evidence` | 求助失败、资源不足、报复风险和机构回应可能使证据延迟形成、不完整或中断，不能据缺失反推暴力不存在。 | 吴炜/何进平（2016）第88-91页；彭文华（2022）第66-77页 | needs-review |
+| `victim-agency-barriers` | `contextualizes_reality_of` | `judicial-recognition-gap` | 理想化的立即报警、立即离开模型可能误读受害者的生存策略并放大司法认定鸿沟。 | 佟新（2000）第102-111页；吴帆等（2023）第65-79页 | needs-review |
+| `state-intervention-limits` | `deepens` | `public-security-response-duty` | 法理研究解释公私领域二分、国家介入正当性、家庭自治边界及警务「家务事」观念；自治和调解不得削弱高危处置与现行职责。 | 黄列（2002）PDF第5-7页；李洪祥（2020）第141-152页；王媖娴（2017）第67-72页；兰孟晗（2021）第37-45页 | needs-review |
+| `constitutional-protection-obligation` | `deepens` | `public-security-response-duty` | 基本权利国家保护义务解释国家为何须积极保护家暴受害人，公安具体职责仍须由现行部门法确定。 | 胡邦彦（2026）第172-186页；薛宁兰（2017）第1-2页 | needs-review |
+| `constitutional-protection-obligation` | `deepens` | `liability-ladder` | 禁止保护不足与风险预防视角可用于学理审视责任层级是否有效，但不改变现行责任条件。 | 胡邦彦（2026）第174-176、181-186页 | needs-review |
+| `gender-power-analysis` | `deepens` | `domestic-violence-definition` | 性别权力与资源结构分析补充家暴发生、持续和求助障碍的解释，并防止受害者归责；F5 只作AI隐性认知底色，不进入胶囊ground或个案事实认定。 | 佟新（2000）第102-111页；郭夏娟、郑熹（2017）第174-183页；黄列（2002）PDF第5-10页；吴帆等（2023）第65-79页 | needs-review |
 
 ## Open edge gaps
 
