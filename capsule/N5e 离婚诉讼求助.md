@@ -123,9 +123,9 @@ author: 火
 - 千千律师事务所-未知时间-《1073份涉家暴离婚判决书研究（2017–2020）》
 
 
-## related_capsules
+# related_capsules
 
-- N5d 是否离婚
-- N2a 证据留存
-- N5p 人身安全保护令申请指南
-- NC 热暴力求助
+- N5d 
+- N2a 
+- N5p 
+- NC 
