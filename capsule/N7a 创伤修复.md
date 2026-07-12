@@ -68,6 +68,6 @@ author: 火
 
 # related_capsules
 
-- N3 求助总览与分流
-- NC 热暴力求助
-- N5d 是否离婚
+- N3 
+- NC 
+- N5d 
