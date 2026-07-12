@@ -94,4 +94,4 @@ author: wave
 
 # related_capsules
 
-- N2a 证据留存
+- N2a
