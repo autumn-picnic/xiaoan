@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-28T01:46:10+00:00",
+  "sources": {
+    "knowledge/source/中华人民共和国反家庭暴力法.md": {
+      "sha256": "fa078521185eaff08733a2f27c8ef0d94a0786aa58600f74ff942de408918f87",
+      "size_bytes": 10133
+    },
+    "knowledge/source/中国反家庭暴力法律法规与司法解释.md": {
+      "sha256": "d504fac7a528ce55887e2707dc0bc11d5b9a3840ce7dd2c114773337489394e7",
+      "size_bytes": 106750
+    },
+    "knowledge/source/为平七周年_案例.md": {
+      "sha256": "604d5e8e8f06cd83b14a62e594a288aeb3b36d45a2c253f55f884d9e62822eb7",
+      "size_bytes": 55954
+    },
+    "knowledge/source/为平八周年_案例.md": {
+      "sha256": "ec4bc9eefa2e7edad462c3e137dbf0f731bb5802b55c843fbb700708a521b99e",
+      "size_bytes": 46723
+    },
+    "knowledge/source/云南省反家庭暴力条例.md": {
+      "sha256": "e5acade2b4b82b107dc963a06657f938e54066035a2f910717432edf14bf0e66",
+      "size_bytes": 20084
+    },
+    "knowledge/source/人身安全保护令实务.md": {
+      "sha256": "41e5e8b181bd7d30178206943667880139d43087f1bd080a12208b47a66968cd",
+      "size_bytes": 21408
+    },
+    "knowledge/source/全国投诉渠道.md": {
+      "sha256": "e6455a80fe837a1e332396bd1799b5a38766400622b7d4f66c7430f52f1cbb7f",
+      "size_bytes": 3968
+    },
+    "knowledge/source/公安机关办理伤害案件规定.md": {
+      "sha256": "46fe1749aa269155a9c746c502563e895ca8928cb5f3dd5956df67c4205f899c",
+      "size_bytes": 12087
+    },
+    "knowledge/source/各省投诉渠道.md": {
+      "sha256": "20183b8c428d47d9af021e9ecb60a5dd49fd0227764adb8198c768a9380f1c8c",
+      "size_bytes": 5570
+    },
+    "knowledge/source/吉林省反家庭暴力条例.md": {
+      "sha256": "7a83b27193cfa1fd5890862e15453f1d667f6dd3a17259b16a2a1b0a77a36e1f",
+      "size_bytes": 10939
+    },
+    "knowledge/source/如何寻求医院及法医鉴定的帮助.md": {
+      "sha256": "b71543c84384c5ae746d5e6203a157ba071ab12a77eb30bbf867e0c4588b8323",
+      "size_bytes": 1383
+    },
+    "knowledge/source/妇联组织受理家庭暴力投诉工作规程.md": {
+      "sha256": "7dd8a4df973fbca0b5d0c487b109bd1eba207d172d255e77fe09a1b875525e9e",
+      "size_bytes": 7656
+    },
+    "knowledge/source/安徽省实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "38817e995b28a04b4d4e8952110e1f4275e6347825511c64824bdf8d7ba38aba",
+      "size_bytes": 11559
+    },
+    "knowledge/source/山东省反家庭暴力条例.md": {
+      "sha256": "cfea6d08b9cb5b5405950ecd686039a1678898d988bb860eded9ecb1450eb70d",
+      "size_bytes": 17784
+    },
+    "knowledge/source/山西省家庭暴力预防和处置办法.md": {
+      "sha256": "d339def3d193dd2ee34d7e5fb3d8179f3e496c27a85cbf6b9349dc9f156513b6",
+      "size_bytes": 10642
+    },
+    "knowledge/source/广东省实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "ddf1b4d90e6eef35c00b10896341f299b6935f91acd73908d480ccdc82c26f46",
+      "size_bytes": 22470
+    },
+    "knowledge/source/新疆维吾尔自治区实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "844819e0ff4653d9568dfb84b8c9484846af897a32d94d74cec8e17e27441b73",
+      "size_bytes": 17551
+    },
+    "knowledge/source/河北省反家庭暴力条例(2022修订).md": {
+      "sha256": "947376af7feb5d3b795ac28214aa00dfba32cd645ffef003c10d3e91bc2cdb50",
+      "size_bytes": 19553
+    },
+    "knowledge/source/河南省反家庭暴力条例.md": {
+      "sha256": "414de44426532d73e917a892eb11e2f09dd5969c10bcd6b63631d20862e1de7e",
+      "size_bytes": 22606
+    },
+    "knowledge/source/海南省实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "0a8e69c0997c1af32247f39076102497f746faf17d898a7a504df4bfe09b2e6e",
+      "size_bytes": 16124
+    },
+    "knowledge/source/涉及家庭暴力婚姻案件审理指南.md": {
+      "sha256": "de09c0fee357ffd8d49234822b256c8542f01dafe33a9940b7c36c58eb538067",
+      "size_bytes": 57505
+    },
+    "knowledge/source/湖北省反家庭暴力条例.md": {
+      "sha256": "80653f658bcd4df494d0b764cebe4f0b582a05cb9d17087e48ae91ca68731755",
+      "size_bytes": 17067
+    },
+    "knowledge/source/湖南省实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "5ecc2b0c300133733495ba3febbfb1caed201e4648fbe415c4f2421d3c792d2d",
+      "size_bytes": 7912
+    },
+    "knowledge/source/甘肃省反家庭暴力条例.md": {
+      "sha256": "e818fac5ef30c7c2d51d710e4fe8b284fbb01e783e3b30dd3935028a79e5cc01",
+      "size_bytes": 18824
+    },
+    "knowledge/source/贵州省反家庭暴力条例.md": {
+      "sha256": "4f3fa1c6ef82d4b90507c7b754c536d92b2243ae934852e520de85bdc66c29d8",
+      "size_bytes": 16113
+    },
+    "knowledge/source/辽宁省反家庭暴力条例.md": {
+      "sha256": "43f1d4dcd95c3a765291fc57e2f0eeaf3f4fd7e2115ea2fbb51b51b32d86c2ba",
+      "size_bytes": 17334
+    },
+    "knowledge/source/重庆市实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "445e03dd38e3b78b3e15b388540578f89b8fd669d72011ebd31e454fbdb5b3d2",
+      "size_bytes": 22172
+    },
+    "knowledge/source/陕西省实施《中华人民共和国反家庭暴力法》办法.md": {
+      "sha256": "f74f8f6a161de5896e366d29e16ec43c81bf87bde2ad48b5af9ecc55951c8cbf",
+      "size_bytes": 14830
+    },
+    "knowledge/source/青海省反家庭暴力条例.md": {
+      "sha256": "8ede0a24d8fd9b9a6c2ee500c0e3e4c818e4ff9a59e775c0768ba5751e91a01e",
+      "size_bytes": 17079
+    },
+    "knowledge/source/预防和制止家庭暴力多部门合作工作手册.md": {
+      "sha256": "19ff651f844f13b4e847ffabe1ca7ad8735469e5a38811b90027c86e229de3ae",
+      "size_bytes": 223529
+    },
+    "knowledge/source/预防和制止家庭暴力警察工作手册.md": {
+      "sha256": "a8be2eb92b5764144ade0297c54ea94f7adcbaf222168d7ea67a9e8e3dabe843",
+      "size_bytes": 237149
+    },
+    "knowledge/source/黑龙江省反家庭暴力条例.md": {
+      "sha256": "8d797ff182c8065ca6bbe8bb12c33c2c778626e82d7db87af88dc185849508c5",
+      "size_bytes": 18766
+    }
+  }
+}

@@ -3,7 +3,8 @@ type: legal-mechanism-tree
 title: "反家庭暴力法律机制树"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md"
-updated: 2026-06-07
+  - "knowledge/source/家暴典型案例.md"
+updated: 2026-07-12
 status: draft
 ---
 
@@ -20,6 +21,7 @@ status: draft
 ## 只读来源
 
 - [[中华人民共和国反家庭暴力法]]
+- [[家暴典型案例]]
 
 ## 当前节点
 
@@ -40,6 +42,10 @@ status: draft
 - [[child-witness-victim]]：目睹家暴的未成年人（地方扩展，需核对）。
 - [[divorce-and-dv]]：离婚诉讼与家庭暴力（家暴离婚理由、再诉新情况、分手暴力）。
 - [[liability-ladder]]：家暴法律责任阶梯——批评教育/告诫/治安处罚/刑事责任。
+- [[sexual-violence-in-family]]：家暴情境下性侵案件的意志判断与未成年被害人陈述审查规则。
+- [[dv-survivor-homicide]]：受暴者反抗致施暴者死亡案件中认定“情节较轻”的裁判考量。
+- [[dv-self-defense]]：制止正在进行的家庭暴力时，正当防卫的成立条件与必要限度。
+- [[civil-dv-fact-finding]]：离婚等民事案件中的家暴事实认定与跨程序证明标准边界。
 
 ## 学术纵深节点（Tier 5，无法律强制力）
 
@@ -55,6 +61,7 @@ status: draft
 
 - 六段式要件清单：`syntheses/protection-order-six-part-checklist.md`（请求权基础分析法应用于保护令，needs-review）。
 - 地方性法规细化对比（18省）：`syntheses/local-regulations-comparison.md`（needs-review）。
+- 最高人民法院反家暴典型案例汇编（2023—2026）：`syntheses/court-cases-collection.md`（33案，needs-review）。
 
 ## 当前机制边
 

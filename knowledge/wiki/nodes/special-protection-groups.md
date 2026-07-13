@@ -4,7 +4,8 @@ node_kind: definition
 title: "特殊保护群体"
 source_refs:
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第五条"
-updated: 2026-06-08
+  - "knowledge/source/家暴典型案例.md#2024年11月/案例4"
+updated: 2026-07-12
 status: draft
 ---
 
@@ -33,6 +34,12 @@ status: draft
 
 - “特殊保护”是原则性要求，具体落实分散在各机制（代为申请、强制报告、撤销监护等）中。
 - 各省对象范围略有差异，以当地条例为准。
+
+## 最高法典型案例——特殊保护群体
+
+**2024年11月案例4（刘某坤虐待重婚）**：被害人为**哺乳期妇女和未成年人**，案例以坚决保护妇女儿童权益为典型意义；法院依法以虐待罪、重婚罪数罪并罚。该案不是重新定义“特殊保护群体”的规则来源。
+
+2025年11月案例8的抚养利益评估已归入 `divorce-and-dv`，2023年11月案例2的强制报告与代为申请已分别归入 `mandatory-reporting`、`personal-safety-protection-order` 和 `support-and-legal-aid`。本节点不把不同程序效果合并成单一的“特殊保护”后果。
 
 ## 机制关系
 

@@ -91,6 +91,11 @@ status: draft
 | `domestic-violence-definition` | `defines_scope_for` | `liability-ladder` | 家暴认定是适用批评教育/告诫/治安/刑事各层责任的前提。 | 反家暴法第16、33条 | draft |
 | `warning-letter` | `defines_scope_for` | `liability-ladder` | 告诫对应“情节较轻、不予治安处罚”一层，与治安/刑事处罚层互斥。 | 反家暴法第16条；公通字〔2024〕34号第一条 | draft |
 | `personal-safety-protection-order` | `creates_consequence_for` | `liability-ladder` | 违反保护令触发训诫、1000元以下罚款、15日以下拘留或刑事责任。 | 反家暴法第34条 | draft |
+| `domestic-violence-definition` | `defines_scope_for` | `sexual-violence-in-family` | 既有家暴形成的恐惧与控制情境，会影响家庭成员或共同生活、照护关系中性侵案件的意志判断与证据审查；无明显反抗不等于同意。 | 家暴典型案例2025案例2、4 | needs-review |
+| `special-protection-groups` | `defines_scope_for` | `sexual-violence-in-family` | 未成年被害人的身心特点、陈述形成环境及是否受干扰，是审查其陈述证明力的重要因素。 | 家暴典型案例2025案例2、4 | needs-review |
+| `domestic-violence-definition` | `defines_scope_for` | `dv-survivor-homicide` | 长期严重家暴史及其对受暴者的影响，是判断杀害施暴人案件起因、动机、被害人过错和是否属于故意杀人“情节较轻”的重要事实。 | 家暴典型案例2024案例二、2023Jun案例2 | needs-review |
+| `domestic-violence-definition` | `defines_scope_for` | `dv-self-defense` | 正在进行的家庭暴力属于正当防卫所针对的不法侵害；是否成立防卫及是否过当仍须结合行为目的、时机和限度判断。 | 家暴典型案例2023Jun案例4 | needs-review |
+| `civil-dv-fact-finding` | `enables` | `divorce-and-dv` | 离婚等民事案件可结合当事人陈述、报警和医疗材料、鉴定、未成年子女证言及对方解释能力综合认定家暴，并加强职权探知；不得与保护令或刑事证明标准混同。 | 家暴典型案例2023Jun案例8、9 | needs-review |
 | `psychological-violence-concept` | `deepens` | `domestic-violence-definition` | 学术研究补充精神暴力的控制目的、人格利益侵害、行为类型及冷暴力边界争议；非约束性，不能替代法律认定。 | 蒋月（2016）第7-8页；郝佳（2016）第59-64页；但淑华（2025）第138-141页 | needs-review |
 | `economic-control-concept` | `deepens` | `domestic-violence-definition` | 学术研究补充经济控制的经济自主侵害、依附后果、四类行为及独立说/涵盖说分歧；非约束性，不能替代法律认定。 | 王理万（2025）第67-81页；但淑华（2025）第138-143页；王丹（2022）第14-15页；郝佳（2016）第58-64页 | needs-review |
 | `dv-scope-extension` | `deepens` | `domestic-violence-definition` | 学术研究补充「家庭成员以外共同生活的人」的关系类型、共同生活判断及前任伴侣边界；非约束性，保护令资格不等同于全面纳入家暴定义。 | 但淑华（2025）第133-143页；薛宁兰（2017）第1-7页；王丹（2022）第11-21页 | needs-review |

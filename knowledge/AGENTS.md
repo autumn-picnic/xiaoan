@@ -84,6 +84,7 @@ This is the frozen working schema for the current phase (frozen 2026-06-07). Ref
 | `consequence` | A legal liability/consequence | 违反保护令的法律责任 |
 | `support` | A support/aid channel | 法律援助、临时庇护、投诉渠道 |
 | `local-rule` | A province/city-specific rule node | 某省实施办法的细化条款 |
+| `concept-depth` | An academic-layer node providing definitional depth, legislative genealogy, judicial sociology, jurisprudential foundation, or advocacy framing. Source: Tier 5 `academic_paper` only. Non-binding. See `knowledge/wiki/academic-layer.md`. | 精神暴力学界定义、司法认定困境 |
 
 ### Edge relations
 
@@ -100,6 +101,9 @@ Eight relations (v0.3, 2026-06-07). v0.2 consolidated 10->6; v0.3 adds the two *
 | `localizes` | A local-rule node refines/implements a national node (cross-level) |
 | `creates_consequence_for` | An act/violation triggers a legal liability/consequence node |
 | `conflicts_with` | Two sourced claims appear to conflict (flag, do not silently resolve) |
+| `deepens` | A `concept-depth` (Tier 5) node enriches the semantic definition of a Tier 1–4 node. Non-binding; AI must signal academic framing when using. |
+| `traces_legislative_origin_of` | A `concept-depth` node explains the comparative-law or legislative-history origin of a Tier 1–4 concept. |
+| `contextualizes_reality_of` | A `concept-depth` node (F3 judicial-reality) explains why a legal mechanism fails or underperforms in practice. |
 
 ### The lawyer's reasoning chain (请求权基础分析)
 
@@ -127,17 +131,20 @@ Record `source_type` per source when ingesting (in the edge/node `source_refs` d
 | --- | --- | --- |
 | 1 | `national_law` | 中华人民共和国反家庭暴力法 |
 | 1 | `judicial_interpretation` | 司法解释、审理指南 |
+| 1 | `court_cases` | 最高人民法院典型案例 |
 | 2 | `local_regulation` | 省/市反家庭暴力条例、实施办法 |
 | 2 | `agency_rule` | 公安机关办理伤害案件规定、妇联工作规程 |
 | 3 | `official_manual` | 预防和制止家庭暴力警察/多部门工作手册 |
 | 3 | `practice_guide` | 法律法规与实务指南、保护令实务 |
 | 4 | `ngo_report` | 为平监测报告、案例汇编 |
 | 4 | `channel_directory` | 全国/各省投诉渠道 |
+| 5 | `academic_paper` | 法学期刊论文（核心期刊/CSSCI）、硕博士学位论文、立法咨询专家意见。**无法律强制力，仅供诠释参考。** |
 
 Rules:
 - A higher-tier source overrides a lower-tier source when they conflict; record the conflict as a `conflicts_with` edge with `needs-review`.
 - Local regulations refine national law via `localizes`; never let a local rule silently contradict national law without a flag.
 - `channel_directory` and `ngo_report` must not be used to invent legal duties; they inform support/context nodes only.
+- `academic_paper` (Tier 5) must not be used to establish legal duties or rights. Use only to deepen concept definitions, explain legislative origins, describe judicial behavior patterns, or provide jurisprudential foundations. AI must signal the non-binding nature with phrases like「学界通说认为」「有学者主张」「实证研究显示」. See `knowledge/wiki/academic-layer.md` for the full schema.
 
 ### Ingest granularity
 

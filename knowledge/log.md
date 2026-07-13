@@ -2,6 +2,44 @@
 
 Append-only chronological record of ingests, durable query pages, lint passes, and major wiki maintenance.
 
+## [2026-07-12] maintenance | 最高法典型案例逐案复合锚点
+
+- 将引用 `家暴典型案例.md` 的节点从批次级月份锚点改为 `年份月份/案例编号` 复合锚点，共 46 条逐案引用。
+- 将节点正文中的 `2023Nov`、`2023Jun`、`2025案例` 等简称统一为 `YYYY年M月案例N`。
+- 扩展 chatflow ground 解析器，使复合锚点限定在父月份章节内，并精确区分 `案例1` 与 `案例10`；新增逐案解析回归测试。
+
+## [2026-07-12] audit-fix | 最高法反家暴典型案例逐案核证
+
+- 以 `source/家暴典型案例.md` 为唯一案例事实基准，逐案核对5批33案与引用该来源的节点。
+- 修复重大错配：2025案例3由“受暴者反杀”纠正为施暴者故意杀人未遂；2025案例5移除误植的就业帮扶；2023Nov案例二/四强制报告事实拆分；2025案例4恢复“其他证据相互印证、非孤证定案”边界。
+- 收窄过度概括：典型案例不表述为全国法定义务；法院回访、线上平台、一站式联动标明个案/地方实践；同居结束不当然排除保护令，但仍需关系关联、现实危险与证据。
+- 拆分程序证明标准：`protection-order-evidence` 仅保留保护令“较大可能性”及证据清单，不再混入离婚和刑事案件的证据评价。
+- 新增 `dv-self-defense` 节点，明确“制止正在进行的家暴而正当防卫”与“事后杀害施暴人后量刑从宽”的法律性质差异。
+- 新增 `civil-dv-fact-finding` 节点，承接离婚等民事案件中的综合证据评价和职权探知，并与保护令、刑事证明标准明确隔离；2023Jun案例3则归入责任阶梯的刑事案例参照。
+- 新增审计报告 `wiki/audits/court-cases-node-audit-2026-07-12.md`；案例型 source_refs 已统一为源文件中可解析的真实批次锚点。
+
+## [2026-06-28] ingest | 家暴典型案例全量 ingest（33案例，wave 4 完整版）
+
+- 補充wave 4 初轮漏处理的 29 个案例（2025年11月8个、2024年11月5个、2023年11月6个、2023年6月10个）。
+- Synthesis 节点：新建 `wiki/syntheses/court-cases-collection.md`，33案例按8主题分组（家暴形式扩展/保护令/刑事责任/受暴者反杀/未成年保护/离婚抚养/证据特则/正当防卫）。
+- 新建节点2个：
+  - `sexual-violence-in-family`（definition, needs-review）：无明显反抗≠同意；未成年被害人陈述特殊采信规则。
+  - `dv-survivor-homicide`（consequence, needs-review）：受暴者杀施暴人"情节较轻"从宽处罚；延迟控告合理性。3个案例确立一致先例。
+- source_refs 更新：`child-witness-victim`（+7）、`divorce-and-dv`（+3）、`mandatory-reporting`（+2）、`protection-order-evidence`（+1）。
+- index.md 新增2个节点条目 + court-cases-collection synthesis 条目。
+- Graph: 19 nodes（+2）, edges 结构不变（新节点机制关系已在节点页 wikilink 记录）。
+
+## [2026-06-28] ingest | 最高人民法院反家庭暴力典型案例（2026.3.30）
+
+- Source: `家暴典型案例.md`, source_type: `court_cases`, tier 1（用户决策：最高法典型案例独立分级，高于 ngo_report）。
+- 策略：整体 ingest，补充 source_ref 到现有节点，不新建节点。
+- 更新节点3个：
+  - `domestic-violence-definition`：新增案例一~三 source_ref；增加"最高法典型案例补充认定"表格（语言暴力/限制社交/经济控制三类形式的司法认定要点和法律后果）。
+  - `personal-safety-protection-order`：新增案例二~四 source_ref；增加"一站式联动闭环干预机制"说明（案例三的多部门协助执行实践）。
+  - `liability-ladder`：新增案例四 source_ref；在违反保护令条款下补充具体案例（拘留15日）。
+- 新增 `court_cases`（tier 1）到 AGENTS.md 和 source-registry.md。
+- Graph: 17 nodes, 39 edges（结构不变，citations 加强）。
+
 ## [2026-06-06] ingest | 中华人民共和国反家庭暴力法
 
 - Added initial LLM-wiki schema in `AGENTS.md`.

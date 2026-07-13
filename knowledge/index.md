@@ -29,6 +29,10 @@ This is the content-oriented catalog for XiaoAn's LLM-maintained legal mechanism
 | [[guardianship-revocation]] | remedy | Revocation of guardianship for severe DV against a ward; support duties survive. | 第21条 |
 | [[special-protection-groups]] | definition | Minors, elderly, disabled, pregnant/nursing women, seriously ill — special protection. | 第5条 |
 | [[child-witness-victim]] | definition | Minors who witness DV treated as victims (local regulations; not in national law). | 重庆/甘肃/黑龙江条例 |
+| [[sexual-violence-in-family]] | definition | 家暴情境下性侵案件的意志判断：无明显反抗≠同意；未成年被害人陈述须结合形成环境及其他证据审查。 | 家暴典型案例2025案例2、4 |
+| [[dv-survivor-homicide]] | consequence | 受暴者杀害施暴人案件中认定故意杀人“情节较轻”的裁判考量与适用边界。 | 家暴典型案例2023、2024 |
+| [[dv-self-defense]] | condition | 为制止正在进行的家暴而保护本人或他人时，正当防卫的时机、目的和限度边界。 | 家暴典型案例2023Jun案例4 |
+| [[civil-dv-fact-finding]] | evidence | 离婚等民事案件中家暴事实的综合证据评价与职权探知；区别于保护令及刑事证明标准。 | 家暴典型案例2023Jun案例8、9 |
 | [[mandatory-reporting]] | duty | Mandatory reporting by institutions for DV against persons lacking/with limited capacity. | 第14、35条；地方 |
 | [[temporary-shelter]] | support | Temporary shelter setup, police-assisted placement, warning-letter as entry voucher. | 第15、18条；告诫意见 |
 | [[divorce-and-dv]] | procedure | DV in divorce litigation: ground for divorce, "new circumstances" re-filing, separation violence. | 法释17号第11条；审理指南 |
@@ -49,12 +53,19 @@ See [[edges]] for the current sourced relationship table.
 | --- | --- | --- | --- |
 | [[protection-order-six-part-checklist]] | 请求权基础分析法（六段式审判框架） | Six-part element checklist for the personal-safety protection order: overview, filing review, applicant claims, respondent defenses, element facts, knowledge graph. | draft |
 | [[local-regulations-comparison]] | 上位法—下位法对照（localizes） | Cross-province comparison of 18 local DV regulations: definition/economic/online/witnessing-children deltas, mandatory warning letters, mandatory reporting, stay-away orders. | needs-review |
+| [[court-cases-collection]] | 最高法典型案例主题索引（2023-2026） | 33个最高法典型案例按8个主题分组：家暴形式扩展、保护令、刑事责任、受暴者反杀、未成年保护、离婚抚养、证据特则、正当防卫。 | needs-review |
+
+## Audits
+
+| Page | Scope | Status |
+| --- | --- | --- |
+| `wiki/audits/court-cases-node-audit-2026-07-12.md` | 最高法反家暴典型案例5批33案与案例型节点的逐案、逐结论对应审计 | needs-review |
 
 ## Open Gaps
 
 - All 32 sources in `knowledge/source/` are ingested (see [[source-registry]]). Pilot + full ingest complete.
 - 18 省条例已做横向对比 [[local-regulations-comparison]]（needs-review，待逐省条号复核）。
-- 旧《审理指南》（2008，“保护裁定”）多被现行法取代，是否单独建 superseded 节点待定。
+- 旧《审理指南》（2008，”保护裁定”）多被现行法取代，是否单独建 superseded 节点待定。
 - Lint 教训：大型法规汇编（如 `中国反家庭暴力法律法规与司法解释.md`，含 14+ 节）首轮 ingest 易只覆盖前部；需逐节核查。`法律援助法第32条` 即属此情形（原已在第13节，曾误判为缺失）。
 - Scenario capsules are intentionally out of scope for the current phase.
 - **学术论文层（wave 5）**：81篇唯一论文已上传 NotebookLM（`b14e6843`；本地82个PDF含1组重复版本）。11个 concept-depth 节点已全部创建；规范见 [[academic-layer]]。

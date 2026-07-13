@@ -45,6 +45,7 @@ status: draft
 | `重庆市实施《中华人民共和国反家庭暴力法》办法` | local_regulation | 2 | done |
 | `陕西省实施《中华人民共和国反家庭暴力法》办法` | local_regulation | 2 | done |
 | `新疆维吾尔自治区实施《中华人民共和国反家庭暴力法》办法` | local_regulation | 2 | done |
+| `家暴典型案例` | court_cases | 1 | done |
 
 ## Pilot ingest 批次
 
@@ -67,6 +68,13 @@ status: draft
 - `channel_directory`（全国/各省投诉渠道）与 `ngo_report`（为平案例）按 schema 不创建法律节点：前者是联系方式目录，后者是案例叙事，均不得用来推导法律义务。已登记为 done，内容仅作 support/context 参考。
 - `预防和制止家庭暴力多部门合作工作手册`（official_manual）内容与现有协作/转介/危险评估节点重叠，未单独建节点，避免重复；其危险评估部分并入 [[dv-risk-assessment]]。
 - `如何寻求医院及法医鉴定的帮助` 的就医取证要点并入 [[injury-appraisal-procedure]]。
+
+## Ingest 说明（wave 4）
+
+- `家暴典型案例`（court_cases, tier 1）：已全量 ingest 最高人民法院2023年6月至2026年3月五批共33个典型案例，并建立 `court-cases-collection` 主题汇编。
+  - 复用并补强家暴定义、保护令、责任阶梯、未成年人保护、离婚抚养、证据等既有节点。
+  - 新建 `sexual-violence-in-family` 与 `dv-survivor-homicide` 两个原子节点，承载家庭成员间性暴力认定、受暴者反抗致施暴者死亡案件裁判规则。
+- 新增 `court_cases` source_type（tier 1）到 AGENTS.md schema 表格。
 
 ## Ingest 说明（wave 3）
 

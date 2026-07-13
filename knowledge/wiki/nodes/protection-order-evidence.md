@@ -6,7 +6,7 @@ source_refs:
   - "knowledge/source/中国反家庭暴力法律法规与司法解释.md#法释〔2022〕17号第六条"
   - "knowledge/source/中华人民共和国反家庭暴力法.md#第二十条"
   - "knowledge/source/人身安全保护令实务.md#三申请流程"
-updated: 2026-06-08
+updated: 2026-07-12
 status: draft
 ---
 
@@ -50,6 +50,6 @@ status: draft
 
 ## 来源依据
 
-- 法释〔2022〕17号第六条：证明标准“较大可能性”及11类相关证据（一手，`knowledge/source/中国反家庭暴力法律法规与司法解释.md`）。
+- 法释〔2022〕17号第六条：证明标准”较大可能性”及11类相关证据（一手，`knowledge/source/中国反家庭暴力法律法规与司法解释.md`）。
 - 反家暴法第20条：出警记录、告诫书、伤情鉴定意见的证据价值。
 - `knowledge/source/人身安全保护令实务.md` 第三节：实务补充与上海数据。
