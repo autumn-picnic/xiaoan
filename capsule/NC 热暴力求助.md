@@ -52,4 +52,4 @@ author:  wave
 
 # related_capsules
 
-- N3 求助
+- N3

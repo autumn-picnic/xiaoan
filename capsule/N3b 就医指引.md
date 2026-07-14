@@ -50,5 +50,5 @@ author: wave
 
 # related_capsules
 
-- N3 求助
-- N3a 报警指引
+- N3
+- N3a
